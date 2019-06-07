@@ -1,0 +1,244 @@
+<html charset=UTF-8>
+
+<head>
+  <meta name='viewport' content='width=device-width, initial-scale=1' />
+  <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
+  <script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js'></script>
+  <link href='https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/darkly/bootstrap.min.css' rel='stylesheet'>
+  <title>CNTT</title>
+</head>
+
+<body>
+  <div class='container-fluid'>
+    <div class='row'>
+      <div class='col-md-12'>
+        <h1>Poultry Farm</h1>
+        <h4>Farming smart way</h4>
+		<h3 class="pull-right">
+			<a href="#" data-toggle="modal" data-target="#myModal">
+				<span class="glyphicon glyphicon-floppy-saved"></span>
+			</a>
+			<a href="#" data-toggle="modal" data-target="#myModal2" class="open-history">
+				<span class="glyphicon glyphicon-th"></span>
+			</a>
+		</h3>
+        <hr>
+        <table class='table'>
+          <thead>
+            <tr>
+              <th>Measure</th>
+              <th>Value</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Temperature</td>
+              <td>
+                <span class="th_temp">10</span>
+              </td>
+              <td>
+                <form action='' method='GET'><button type='button submit'
+                    class='btn btn-success btn-sm'>Refresh</button></form>
+              </td>
+            </tr>
+            <tr>
+              <td>Humidity</td>
+              <td>
+                <span class="th_hum">10</span>
+              </td>
+              <td>
+                <form action='' method='GET'><button type='button submit'
+                    class='btn btn-success btn-sm'>Refresh</button></form>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <hr>
+        <h3>Control</h3>
+        <div class='row'>
+          <div class='col-md-4'>
+            <h4 class='text-left'>Feed
+              <span class='badge' id="current_status">
+
+              </span></h4>
+          </div>
+          <div class='col-md-4'>
+            <form action='/feeding/on' method='POST' class="frm-feeding"><button type='button submit' name='D5' value='1'
+                class='btn btn-success btn-lg btn-start btn-feeding'>START</button></form>
+          </div>
+          <div class='col-md-4'>
+            <form action='/feeding/off' method='POST' class="frm-feeding"><button type='button submit' name='D5' value='0'
+                class='btn btn-danger btn-lg btn-stop btn-feeding'>STOP</button></form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="/socket.io/socket.io.js"></script>
+  <script>
+    var socket = io.connect();
+    socket.on('connect', function (data) {
+      socket.emit('join', 'Hello World from client');
+    });
+    socket.on('feeding', function (data) {
+		console.log("feeding: " + data);
+      $("#current_status").text(data);
+      if(data == "1") {
+        $(".btn-start").attr('disabled', 'disabled');
+        $(".btn-stop").removeAttr('disabled');
+      }
+      if(data == "0") {
+        $(".btn-stop").attr('disabled', 'disabled');
+        $(".btn-start").removeAttr('disabled');
+      }
+    });
+	
+	socket.on('th', function (data) {
+		var temp_hum = JSON.parse(data);
+		console.log(temp_hum);
+		$('.th_temp').text(temp_hum.temp);
+		$('.th_hum').text(temp_hum.hum);
+		
+    });
+  </script>
+  
+  <!-- Modal -->
+<div id="myModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Time settings</h4>
+      </div>
+	  <form class="form-inline" action="/settings" method="post">
+      <div class="modal-body">
+        <div class="row" style="padding:10px;">
+		  <div class="form-group">
+			<label for="email">Start at:</label>
+			<select class="form-control" name="start_at_hours[]">
+				<% for(var i=0; i<24; i++) {%>
+				<option value="<%=i%>"><%=i%></option>
+				<% } %>
+			</select>
+		  </div>
+		  <div class="form-group">
+			<label for="email">Start at:</label>
+			<select class="form-control" name="start_at_mins[]">
+				<% for(var i=0; i<60; i++) {%>
+				<option value="<%=i%>"><%=i%></option>
+				<% } %>
+			</select>
+		  </div>
+		  <div class="form-group">
+			<label for="pwd">Duration:</label>
+			<input type="text" class="form-control" name="durations[]">
+		  </div>
+		</div>
+		
+		<a href="#" class="add_row">
+		  <span class="glyphicon glyphicon-plus"></span>
+		</a>
+		</p>
+      </div>
+      <div class="modal-footer">
+		<button type="submit" class="btn btn-default">Save</button>
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+	  </form>
+    </div>
+
+  </div>
+</div>
+
+<!-- Modal -->
+<div id="myModal2" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">History</h4>
+      </div>
+      <div class="modal-body">
+		<div class="loader row" style="text-align:center;">
+        <img src="images/ajax-loader.gif" style="transform: scale(2); " />
+		</div>
+		<div class="history_data" style="display:none;">
+			<table class='table'>
+				<thead>
+					<tr>
+						<th>
+							No
+						</th>
+						<th>
+							Time
+						</th>
+						<th>
+							Status
+						</th>
+						<th>
+							Type
+						</th>
+					</tr>
+				</thead>
+				<tbody>
+				</tbody>
+			</table>
+		</div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+	  
+    </div>
+
+  </div>
+</div>
+	<script>
+	$(function(){
+		$(".add_row").click(function(){
+			$(".form-inline .row").first().clone().insertBefore($(this));
+		});
+		
+		$('.frm-feeding').submit(function(e){
+			e.preventDefault();
+			$form = $(this);
+			$.ajax({
+				url: $form.attr('action'),
+				type: "post",
+				success: function(ressp){
+					console.log(ressp);
+				}
+			})
+		});
+		
+		$(".open-history").click(function(){
+			$('.history_data').hide();
+			$('.loader').show();
+			$(".history_data table tbody").html('');
+			setTimeout(function(){
+				if(!$('#myModal2').is(":hidden")) {
+					$.ajax({
+						url: 'feeding/history',
+						dataType: 'json',
+						success: function(data){
+							if(data.history.length>0){
+								for(x in data.history){
+									$(".history_data table tbody").append('<tr><td>'+(parseInt(x)+1)+'</td><td>'+data.history[x].timestamp+'</td><td>'+data.history[x].status+'</td><td>'+data.history[x].type+'</td></tr>');
+								}
+								$('.history_data').show();
+								$('.loader').hide();
+							}
+						}
+					});
+				}
+			}, 1000);
+		});
+	})
+	</script>
+</body>
+
+</html>

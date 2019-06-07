@@ -1,0 +1,145 @@
+#!/usr/bin/env node
+
+/**
+ * Module dependencies.
+ */
+
+var app = require('../app');
+var debug = require('debug')('mqtt:server');
+var http = require('http');
+
+/**
+ * Get port from environment and store in Express.
+ */
+
+var port = normalizePort(process.env.PORT || '3000');
+app.set('port', port);
+
+/**
+ * Create HTTP server.
+ */
+
+var server = http.createServer(app);
+
+var io = require('socket.io')(server);
+
+/**
+ * Listen on provided port, on all network interfaces.
+ */
+
+server.listen(port);
+server.on('error', onError);
+server.on('listening', onListening);
+
+/**
+ * Normalize a port into a number, string, or false.
+ */
+
+function normalizePort(val) {
+  var port = parseInt(val, 10);
+
+  if (isNaN(port)) {
+    // named pipe
+    return val;
+  }
+
+  if (port >= 0) {
+    // port number
+    return port;
+  }
+
+  return false;
+}
+
+/**
+ * Event listener for HTTP server "error" event.
+ */
+
+function onError(error) {
+  if (error.syscall !== 'listen') {
+    throw error;
+  }
+
+  var bind = typeof port === 'string'
+    ? 'Pipe ' + port
+    : 'Port ' + port;
+
+  // handle specific listen errors with friendly messages
+  switch (error.code) {
+    case 'EACCES':
+      console.error(bind + ' requires elevated privileges');
+      process.exit(1);
+      break;
+    case 'EADDRINUSE':
+      console.error(bind + ' is already in use');
+      process.exit(1);
+      break;
+    default:
+      throw error;
+  }
+}
+
+/**
+ * Event listener for HTTP server "listening" event.
+ */
+
+function onListening() {
+  var addr = server.address();
+  var bind = typeof addr === 'string'
+    ? 'pipe ' + addr
+    : 'port ' + addr.port;
+  debug('Listening on ' + bind);
+}
+
+io.on('connection', function (client) {
+  console.log('Client connected...');
+
+  client.on('join', function (data) {
+    console.log(data);
+  })
+})
+
+var mqtt = require('mqtt');
+
+var MQTTclient = mqtt.connect("mqtt://45.76.53.193");
+console.log("connected flag  " + MQTTclient.connected);
+
+//handle incoming messages
+MQTTclient.on('message', function (topic, message, packet) {
+  console.log("message is " + message);
+  console.log("topic is " + topic);
+  if(topic == "feeding") {
+	console.log('message from topic feeding: ' + message.toString());
+	if(message == '1' || message.toString() == '1') {
+		console.log('here1');
+		io.emit('feeding', '1');
+		console.log('here2');
+	}
+	if(message == '0' || message.toString() == '0') {
+		console.log('here3');
+		io.emit('feeding', '0');
+		console.log('here4');
+	}
+  }
+  if(topic == "th") {
+	  console.log('message from topic feeding: ' + message.toString());
+    io.emit('th', message.toString());
+  }
+});
+
+
+MQTTclient.on("connect", function () {
+  console.log("connected  " + MQTTclient.connected);
+
+})
+//handle errors
+MQTTclient.on("error", function (error) {
+  console.log("Can't connect" + error);
+  process.exit(1)
+});
+
+var topic="feeding";
+
+console.log("subscribing to topics");
+MQTTclient.subscribe("feeding");
+MQTTclient.subscribe("th");

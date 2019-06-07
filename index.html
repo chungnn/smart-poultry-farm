@@ -1,0 +1,80 @@
+<html charset=UTF-8>
+
+<head>
+  <meta http-equiv='refresh' content='60' name='viewport' content='width=device-width, initial-scale=1' />
+  <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
+  <script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js'></script>
+  <link href='https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/darkly/bootstrap.min.css' rel='stylesheet'>
+  <title>CNTT</title>
+</head>
+
+<body>
+  <div class='container-fluid'>
+    <div class='row'>
+      <div class='col-md-12'>
+        <h1>Demo Feeding Chicken</h1>
+        <h3>Chicken farm</h3><h3 class="pull-right">Settings</h3>
+        <ul class='nav nav-pills'>
+          <li class='active'>
+            <a href='#'>
+              <span class='badge pull-right'> 22</span> Temperature</a>
+          </li>
+          <li class='active'>
+            <a href='#'> <span class='badge pull-right'> 100 </span> Humidity</a>
+          </li>
+        </ul>
+        <table class='table'>
+          <thead>
+            <tr>
+              <th>Device</th>
+              <th>Measure</th>
+              <th>Value</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>DHT22</td>
+              <td>Temperature</td>
+              <td>
+                  10
+              </td>
+              <td>
+                  <form action='' method='GET'><button type='button submit'  class='btn btn-success btn-sm'>Refresh</button></form>
+              </td>
+            </tr>
+            <tr class='active'>
+              <td>DHT22</td>
+              <td>Humidity</td>
+              <td>
+                  30
+              </td>
+              <td>
+                  <form action='' method='GET'><button type='button submit'  class='btn btn-success btn-sm'>Refresh</button></form>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <h3>Control</h3>
+        <div class='row'>
+          <div class='col-md-4'>
+            <h4 class='text-left'>Feed
+              <span class='badge'>
+                
+              </span></h4>
+          </div>
+          <div class='col-md-4'>
+            <form action='/' method='POST'><button type='button submit' name='D5' value='1'
+                class='btn btn-success btn-lg'>START</button></form>
+          </div>
+          <div class='col-md-4'>
+            <form action='/' method='POST'><button type='button submit' name='D5' value='0'
+                class='btn btn-danger btn-lg'>STOP</button></form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
