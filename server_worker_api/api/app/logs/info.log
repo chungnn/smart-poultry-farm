@@ -1,0 +1,85 @@
+2019-06-05 20:25:17,547 INFO: App log folder: /home/vuns/Desktop/flask-project-master/app/logs [in config_log_handler:/home/vuns/Desktop/flask-project-master/app/app.py:104]
+2019-06-05 20:25:34,663 INFO: Config filename: app/config.py [in config_log_handler:/home/vuns/Desktop/flask-project-master/app/app.py:103]
+2019-06-05 20:25:34,665 INFO: App log folder: /home/vuns/Desktop/flask-project-master/app/logs [in config_log_handler:/home/vuns/Desktop/flask-project-master/app/app.py:104]
+2019-06-05 20:25:36,457 INFO: Config filename: app/config.py [in config_log_handler:/home/vuns/Desktop/flask-project-master/app/app.py:103]
+2019-06-05 20:25:36,458 INFO: App log folder: /home/vuns/Desktop/flask-project-master/app/logs [in config_log_handler:/home/vuns/Desktop/flask-project-master/app/app.py:104]
+2019-06-06 08:45:48,746 INFO: Config filename: app/config.py [in config_log_handler:/home/vuns/Desktop/flask-project-master/app/app.py:103]
+2019-06-06 08:45:48,748 INFO: App log folder: /home/vuns/Desktop/flask-project-master/app/logs [in config_log_handler:/home/vuns/Desktop/flask-project-master/app/app.py:104]
+2019-06-06 08:45:53,123 INFO: Config filename: app/config.py [in config_log_handler:/home/vuns/Desktop/flask-project-master/app/app.py:103]
+2019-06-06 08:45:53,124 INFO: App log folder: /home/vuns/Desktop/flask-project-master/app/logs [in config_log_handler:/home/vuns/Desktop/flask-project-master/app/app.py:104]
+2019-06-06 08:50:15,822 ERROR: HTTP_STATUS_CODE_500: {'message': 'Internal Server Error.', 'code': 500} [in api_error_handler:/home/vuns/Desktop/flask-project-master/app/exception.py:191]
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1832, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1818, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/vuns/Desktop/flask-project-master/app/api/chicken_farm_control.py", line 42, in get_all_settings
+    return jsonify({'count': len(rs), 'settings': rs})
+UnboundLocalError: local variable 'rs' referenced before assignment
+2019-06-06 08:50:15,822 ERROR: HTTP_STATUS_CODE_500: {'message': 'Internal Server Error.', 'code': 500} [in api_error_handler:/home/vuns/Desktop/flask-project-master/app/exception.py:191]
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1832, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1818, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/vuns/Desktop/flask-project-master/app/api/chicken_farm_control.py", line 42, in get_all_settings
+    return jsonify({'count': len(rs), 'settings': rs})
+UnboundLocalError: local variable 'rs' referenced before assignment
+2019-06-06 08:51:16,757 ERROR: HTTP_STATUS_CODE_500: {'message': 'Internal Server Error.', 'code': 500} [in api_error_handler:/home/vuns/Desktop/flask-project-master/app/exception.py:191]
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1832, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1818, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/vuns/Desktop/flask-project-master/app/api/chicken_farm_control.py", line 42, in get_all_settings
+    return jsonify({'count': len(rs), 'settings': rs})
+UnboundLocalError: local variable 'rs' referenced before assignment
+2019-06-06 08:51:16,757 ERROR: HTTP_STATUS_CODE_500: {'message': 'Internal Server Error.', 'code': 500} [in api_error_handler:/home/vuns/Desktop/flask-project-master/app/exception.py:191]
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1832, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1818, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/vuns/Desktop/flask-project-master/app/api/chicken_farm_control.py", line 42, in get_all_settings
+    return jsonify({'count': len(rs), 'settings': rs})
+UnboundLocalError: local variable 'rs' referenced before assignment
+2019-06-06 08:51:38,647 INFO: Config filename: app/config.py [in config_log_handler:/home/vuns/Desktop/flask-project-master/app/app.py:103]
+2019-06-06 08:51:38,649 INFO: App log folder: /home/vuns/Desktop/flask-project-master/app/logs [in config_log_handler:/home/vuns/Desktop/flask-project-master/app/app.py:104]
+2019-06-06 08:51:40,559 INFO: Config filename: app/config.py [in config_log_handler:/home/vuns/Desktop/flask-project-master/app/app.py:103]
+2019-06-06 08:51:40,560 INFO: App log folder: /home/vuns/Desktop/flask-project-master/app/logs [in config_log_handler:/home/vuns/Desktop/flask-project-master/app/app.py:104]
+2019-06-06 08:54:27,368 INFO: Config filename: app/config.py [in config_log_handler:/home/vuns/Desktop/flask-project-master/app/app.py:103]
+2019-06-06 08:54:27,370 INFO: App log folder: /home/vuns/Desktop/flask-project-master/app/logs [in config_log_handler:/home/vuns/Desktop/flask-project-master/app/app.py:104]
+2019-06-06 08:54:29,299 INFO: Config filename: app/config.py [in config_log_handler:/home/vuns/Desktop/flask-project-master/app/app.py:103]
+2019-06-06 08:54:29,301 INFO: App log folder: /home/vuns/Desktop/flask-project-master/app/logs [in config_log_handler:/home/vuns/Desktop/flask-project-master/app/app.py:104]
+2019-06-06 09:04:33,153 INFO: Config filename: app/config.py [in config_log_handler:/home/vuns/Desktop/flask-project-master/app/app.py:103]
+2019-06-06 09:04:33,155 INFO: App log folder: /home/vuns/Desktop/flask-project-master/app/logs [in config_log_handler:/home/vuns/Desktop/flask-project-master/app/app.py:104]
+2019-06-06 09:04:34,908 INFO: Config filename: app/config.py [in config_log_handler:/home/vuns/Desktop/flask-project-master/app/app.py:103]
+2019-06-06 09:04:34,911 INFO: App log folder: /home/vuns/Desktop/flask-project-master/app/logs [in config_log_handler:/home/vuns/Desktop/flask-project-master/app/app.py:104]
+2019-06-06 09:07:05,467 INFO: Config filename: app/config.py [in config_log_handler:/home/vuns/Desktop/flask-project-master/app/app.py:103]
+2019-06-06 09:07:05,469 INFO: App log folder: /home/vuns/Desktop/flask-project-master/app/logs [in config_log_handler:/home/vuns/Desktop/flask-project-master/app/app.py:104]
+2019-06-06 09:07:56,499 INFO: Config filename: app/config.py [in config_log_handler:/home/vuns/Desktop/flask-project-master/app/app.py:103]
+2019-06-06 09:07:56,501 INFO: App log folder: /home/vuns/Desktop/flask-project-master/app/logs [in config_log_handler:/home/vuns/Desktop/flask-project-master/app/app.py:104]
+2019-06-06 09:07:58,327 INFO: Config filename: app/config.py [in config_log_handler:/home/vuns/Desktop/flask-project-master/app/app.py:103]
+2019-06-06 09:07:58,328 INFO: App log folder: /home/vuns/Desktop/flask-project-master/app/logs [in config_log_handler:/home/vuns/Desktop/flask-project-master/app/app.py:104]
+2019-06-06 09:12:30,106 INFO: Config filename: app/config.py [in config_log_handler:/home/vuns/Desktop/flask-project-master/app/app.py:103]
+2019-06-06 09:12:30,107 INFO: App log folder: /home/vuns/Desktop/flask-project-master/app/logs [in config_log_handler:/home/vuns/Desktop/flask-project-master/app/app.py:104]
+2019-06-07 07:02:47,917 INFO: Config filename: app/config.py [in config_log_handler:/home/vuns/Desktop/flask-project-master/app/app.py:103]
+2019-06-07 07:02:47,937 INFO: App log folder: /home/vuns/Desktop/flask-project-master/app/logs [in config_log_handler:/home/vuns/Desktop/flask-project-master/app/app.py:104]
+2019-06-07 07:02:49,871 INFO: Config filename: app/config.py [in config_log_handler:/home/vuns/Desktop/flask-project-master/app/app.py:103]
+2019-06-07 07:02:49,873 INFO: App log folder: /home/vuns/Desktop/flask-project-master/app/logs [in config_log_handler:/home/vuns/Desktop/flask-project-master/app/app.py:104]
+2019-06-07 07:17:03,013 INFO: Config filename: app/config.py [in config_log_handler:/home/vuns/Desktop/flask-project-master/app/app.py:103]
+2019-06-07 07:17:03,042 INFO: App log folder: /home/vuns/Desktop/flask-project-master/app/logs [in config_log_handler:/home/vuns/Desktop/flask-project-master/app/app.py:104]
+2019-06-07 07:17:04,401 INFO: Config filename: app/config.py [in config_log_handler:/home/vuns/Desktop/flask-project-master/app/app.py:103]
+2019-06-07 07:17:04,402 INFO: App log folder: /home/vuns/Desktop/flask-project-master/app/logs [in config_log_handler:/home/vuns/Desktop/flask-project-master/app/app.py:104]
+2019-06-07 07:30:53,215 INFO: Config filename: app/config.py [in config_log_handler:/home/vuns/Desktop/flask-project-master/app/app.py:103]
+2019-06-07 07:30:53,221 INFO: App log folder: /home/vuns/Desktop/flask-project-master/app/logs [in config_log_handler:/home/vuns/Desktop/flask-project-master/app/app.py:104]
+2019-06-07 07:30:54,682 INFO: Config filename: app/config.py [in config_log_handler:/home/vuns/Desktop/flask-project-master/app/app.py:103]
+2019-06-07 07:30:54,683 INFO: App log folder: /home/vuns/Desktop/flask-project-master/app/logs [in config_log_handler:/home/vuns/Desktop/flask-project-master/app/app.py:104]
+2019-06-07 07:40:24,685 INFO: Config filename: app/config.py [in config_log_handler:/home/vuns/Desktop/flask-project-master/app/app.py:103]
+2019-06-07 07:40:24,687 INFO: App log folder: /home/vuns/Desktop/flask-project-master/app/logs [in config_log_handler:/home/vuns/Desktop/flask-project-master/app/app.py:104]
+2019-06-07 07:40:26,157 INFO: Config filename: app/config.py [in config_log_handler:/home/vuns/Desktop/flask-project-master/app/app.py:103]
+2019-06-07 07:40:26,158 INFO: App log folder: /home/vuns/Desktop/flask-project-master/app/logs [in config_log_handler:/home/vuns/Desktop/flask-project-master/app/app.py:104]
+2019-06-07 07:52:59,622 INFO: Config filename: app/config.py [in config_log_handler:/home/vuns/Desktop/flask-project-master/app/app.py:103]
+2019-06-07 07:52:59,624 INFO: App log folder: /home/vuns/Desktop/flask-project-master/app/logs [in config_log_handler:/home/vuns/Desktop/flask-project-master/app/app.py:104]
+2019-06-07 07:53:01,089 INFO: Config filename: app/config.py [in config_log_handler:/home/vuns/Desktop/flask-project-master/app/app.py:103]
+2019-06-07 07:53:01,090 INFO: App log folder: /home/vuns/Desktop/flask-project-master/app/logs [in config_log_handler:/home/vuns/Desktop/flask-project-master/app/app.py:104]

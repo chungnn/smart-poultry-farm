@@ -1,0 +1,26 @@
+2019-06-04 06:30:53,494 ERROR: HTTP_STATUS_CODE_500: {'message': 'Internal Server Error.', 'code': 500} [in api_error_handler:/home/vuns/Desktop/flask-project-master/app/exception.py:191]
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1832, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1818, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/vuns/Desktop/flask-project-master/app/api/chicken_farm_control.py", line 34, in get_feeding_history
+    all_history = history_collection.find({})
+  File "/home/vuns/Desktop/flask-project-master/app/db/mongo.py", line 19, in find
+    return self.db.find(spec=spec, field=field, limit=limit, skip=skip, sort=sort)
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/collection.py", line 1456, in find
+    return Cursor(self, *args, **kwargs)
+TypeError: __init__() got an unexpected keyword argument 'field'
+2019-06-04 06:31:58,418 ERROR: HTTP_STATUS_CODE_500: {'message': 'Internal Server Error.', 'code': 500} [in api_error_handler:/home/vuns/Desktop/flask-project-master/app/exception.py:191]
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1832, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1818, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/vuns/Desktop/flask-project-master/app/api/chicken_farm_control.py", line 34, in get_feeding_history
+    all_history = history_collection.find({})
+  File "/home/vuns/Desktop/flask-project-master/app/db/mongo.py", line 19, in find
+    return self.db.find(spec=spec, field=field, limit=limit, skip=skip, sort=sort)
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/collection.py", line 1456, in find
+    return Cursor(self, *args, **kwargs)
+TypeError: __init__() got an unexpected keyword argument 'field'

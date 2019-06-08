@@ -1,0 +1,1135 @@
+2018-07-12 22:49:44,985 INFO: Config filename: app/config.py [in config_log_handler:/home/thild/Documents/MyProject/app/app.py:90]
+2018-07-12 22:49:44,986 INFO: App log folder: /home/thild/Documents/MyProject/app/logs [in config_log_handler:/home/thild/Documents/MyProject/app/app.py:91]
+2018-07-22 21:44:09,881 INFO: Config filename: app/config.py [in config_log_handler:/home/thild/Documents/MyProject/app/app.py:102]
+2018-07-22 21:44:09,883 INFO: App log folder: /home/thild/Documents/MyProject/app/logs [in config_log_handler:/home/thild/Documents/MyProject/app/app.py:103]
+2018-07-22 22:14:43,502 INFO: Config filename: app/config.py [in config_log_handler:/home/thild/Documents/MyProject/app/app.py:102]
+2018-07-22 22:14:43,504 INFO: App log folder: /home/thild/Documents/MyProject/app/logs [in config_log_handler:/home/thild/Documents/MyProject/app/app.py:103]
+2018-07-22 22:18:48,835 INFO: Config filename: app/config.py [in config_log_handler:/home/thild/Documents/MyProject/app/app.py:102]
+2018-07-22 22:18:48,846 INFO: App log folder: /home/thild/Documents/MyProject/app/logs [in config_log_handler:/home/thild/Documents/MyProject/app/app.py:103]
+2018-07-22 22:19:22,137 ERROR: HTTP_STATUS_CODE_400: {'message': u'PARAM.WRONG', 'code': 1007} [in api_error_handler:/home/thild/Documents/MyProject/app/exception.py:191]
+Traceback (most recent call last):
+  File "/home/thild/Documents/MyProject/venv/local/lib/python2.7/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/thild/Documents/MyProject/venv/local/lib/python2.7/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/thild/Documents/MyProject/app/api/user.py", line 25, in register
+    raise BadRequest(1007)
+BadRequest
+2018-07-22 22:19:22,137 ERROR: HTTP_STATUS_CODE_400: {'message': u'PARAM.WRONG', 'code': 1007} [in api_error_handler:/home/thild/Documents/MyProject/app/exception.py:191]
+Traceback (most recent call last):
+  File "/home/thild/Documents/MyProject/venv/local/lib/python2.7/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/thild/Documents/MyProject/venv/local/lib/python2.7/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/thild/Documents/MyProject/app/api/user.py", line 25, in register
+    raise BadRequest(1007)
+BadRequest
+2018-07-22 22:25:38,046 ERROR: HTTP_STATUS_CODE_500: {'message': 'Internal Server Error.', 'code': 500} [in api_error_handler:/home/thild/Documents/MyProject/app/exception.py:191]
+Traceback (most recent call last):
+  File "/home/thild/Documents/MyProject/venv/local/lib/python2.7/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/thild/Documents/MyProject/venv/local/lib/python2.7/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/thild/Documents/MyProject/app/api/user.py", line 27, in register
+    user_1 = user_collection.find_one({'username': user['username']})
+TypeError: find_one() takes exactly 3 arguments (2 given)
+2018-07-22 22:25:38,046 ERROR: HTTP_STATUS_CODE_500: {'message': 'Internal Server Error.', 'code': 500} [in api_error_handler:/home/thild/Documents/MyProject/app/exception.py:191]
+Traceback (most recent call last):
+  File "/home/thild/Documents/MyProject/venv/local/lib/python2.7/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/thild/Documents/MyProject/venv/local/lib/python2.7/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/thild/Documents/MyProject/app/api/user.py", line 27, in register
+    user_1 = user_collection.find_one({'username': user['username']})
+TypeError: find_one() takes exactly 3 arguments (2 given)
+2018-07-22 22:28:31,820 INFO: Config filename: app/config.py [in config_log_handler:/home/thild/Documents/MyProject/app/app.py:102]
+2018-07-22 22:28:31,820 INFO: App log folder: /home/thild/Documents/MyProject/app/logs [in config_log_handler:/home/thild/Documents/MyProject/app/app.py:103]
+2018-07-22 22:28:35,099 ERROR: HTTP_STATUS_CODE_500: {'message': 'Internal Server Error.', 'code': 500} [in api_error_handler:/home/thild/Documents/MyProject/app/exception.py:191]
+Traceback (most recent call last):
+  File "/home/thild/Documents/MyProject/venv/local/lib/python2.7/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/thild/Documents/MyProject/venv/local/lib/python2.7/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/thild/Documents/MyProject/app/api/user.py", line 27, in register
+    user_1 = user_collection.find_one({'username': user['username']})
+  File "/home/thild/Documents/MyProject/app/db/mongo.py", line 23, in find_one
+    return self.db.find_one(spec=spec, field=field)
+  File "/home/thild/Documents/MyProject/venv/local/lib/python2.7/site-packages/pymongo/collection.py", line 722, in find_one
+    *args, **kwargs).max_time_ms(max_time_ms)
+  File "/home/thild/Documents/MyProject/venv/local/lib/python2.7/site-packages/pymongo/collection.py", line 877, in find
+    return Cursor(self, *args, **kwargs)
+TypeError: __init__() got multiple values for keyword argument 'spec'
+2018-07-22 22:28:35,099 ERROR: HTTP_STATUS_CODE_500: {'message': 'Internal Server Error.', 'code': 500} [in api_error_handler:/home/thild/Documents/MyProject/app/exception.py:191]
+Traceback (most recent call last):
+  File "/home/thild/Documents/MyProject/venv/local/lib/python2.7/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/thild/Documents/MyProject/venv/local/lib/python2.7/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/thild/Documents/MyProject/app/api/user.py", line 27, in register
+    user_1 = user_collection.find_one({'username': user['username']})
+  File "/home/thild/Documents/MyProject/app/db/mongo.py", line 23, in find_one
+    return self.db.find_one(spec=spec, field=field)
+  File "/home/thild/Documents/MyProject/venv/local/lib/python2.7/site-packages/pymongo/collection.py", line 722, in find_one
+    *args, **kwargs).max_time_ms(max_time_ms)
+  File "/home/thild/Documents/MyProject/venv/local/lib/python2.7/site-packages/pymongo/collection.py", line 877, in find
+    return Cursor(self, *args, **kwargs)
+TypeError: __init__() got multiple values for keyword argument 'spec'
+2018-07-22 22:29:40,628 INFO: Config filename: app/config.py [in config_log_handler:/home/thild/Documents/MyProject/app/app.py:102]
+2018-07-22 22:29:40,630 INFO: App log folder: /home/thild/Documents/MyProject/app/logs [in config_log_handler:/home/thild/Documents/MyProject/app/app.py:103]
+2018-07-22 22:30:47,222 INFO: Config filename: app/config.py [in config_log_handler:/home/thild/Documents/MyProject/app/app.py:102]
+2018-07-22 22:30:47,224 INFO: App log folder: /home/thild/Documents/MyProject/app/logs [in config_log_handler:/home/thild/Documents/MyProject/app/app.py:103]
+2018-07-22 22:34:15,075 INFO: Config filename: app/config.py [in config_log_handler:/home/thild/Documents/MyProject/app/app.py:102]
+2018-07-22 22:34:15,078 INFO: App log folder: /home/thild/Documents/MyProject/app/logs [in config_log_handler:/home/thild/Documents/MyProject/app/app.py:103]
+2018-07-22 22:39:26,206 ERROR: HTTP_STATUS_CODE_500: {'message': 'Internal Server Error.', 'code': 500} [in api_error_handler:/home/thild/Documents/MyProject/app/exception.py:191]
+Traceback (most recent call last):
+  File "/home/thild/Documents/MyProject/venv/local/lib/python2.7/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/thild/Documents/MyProject/venv/local/lib/python2.7/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/thild/Documents/MyProject/app/api/user.py", line 66, in login
+    access_token = create_access_token(identity=user_obj, fresh=True)
+  File "/home/thild/Documents/MyProject/venv/local/lib/python2.7/site-packages/flask_jwt_extended/utils.py", line 115, in create_access_token
+    return jwt_manager._create_access_token(identity, fresh, expires_delta)
+  File "/home/thild/Documents/MyProject/venv/local/lib/python2.7/site-packages/flask_jwt_extended/jwt_manager.py", line 400, in _create_access_token
+    expires_delta = config.access_expires
+  File "/home/thild/Documents/MyProject/venv/local/lib/python2.7/site-packages/flask_jwt_extended/config.py", line 170, in access_expires
+    raise RuntimeError('JWT_ACCESS_TOKEN_EXPIRES must be a datetime.timedelta or False')
+RuntimeError: JWT_ACCESS_TOKEN_EXPIRES must be a datetime.timedelta or False
+2018-07-22 22:39:26,206 ERROR: HTTP_STATUS_CODE_500: {'message': 'Internal Server Error.', 'code': 500} [in api_error_handler:/home/thild/Documents/MyProject/app/exception.py:191]
+Traceback (most recent call last):
+  File "/home/thild/Documents/MyProject/venv/local/lib/python2.7/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/thild/Documents/MyProject/venv/local/lib/python2.7/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/thild/Documents/MyProject/app/api/user.py", line 66, in login
+    access_token = create_access_token(identity=user_obj, fresh=True)
+  File "/home/thild/Documents/MyProject/venv/local/lib/python2.7/site-packages/flask_jwt_extended/utils.py", line 115, in create_access_token
+    return jwt_manager._create_access_token(identity, fresh, expires_delta)
+  File "/home/thild/Documents/MyProject/venv/local/lib/python2.7/site-packages/flask_jwt_extended/jwt_manager.py", line 400, in _create_access_token
+    expires_delta = config.access_expires
+  File "/home/thild/Documents/MyProject/venv/local/lib/python2.7/site-packages/flask_jwt_extended/config.py", line 170, in access_expires
+    raise RuntimeError('JWT_ACCESS_TOKEN_EXPIRES must be a datetime.timedelta or False')
+RuntimeError: JWT_ACCESS_TOKEN_EXPIRES must be a datetime.timedelta or False
+2018-07-22 22:43:42,082 INFO: Config filename: app/config.py [in config_log_handler:/home/thild/Documents/MyProject/app/app.py:102]
+2018-07-22 22:43:42,083 INFO: App log folder: /home/thild/Documents/MyProject/app/logs [in config_log_handler:/home/thild/Documents/MyProject/app/app.py:103]
+2018-07-22 22:52:09,052 INFO: Config filename: app/config.py [in config_log_handler:/home/thild/Documents/MyProject/app/app.py:102]
+2018-07-22 22:52:09,055 INFO: App log folder: /home/thild/Documents/MyProject/app/logs [in config_log_handler:/home/thild/Documents/MyProject/app/app.py:103]
+2018-07-22 22:59:12,306 INFO: Config filename: app/config.py [in config_log_handler:/home/thild/Documents/MyProject/app/app.py:102]
+2018-07-22 22:59:12,310 INFO: App log folder: /home/thild/Documents/MyProject/app/logs [in config_log_handler:/home/thild/Documents/MyProject/app/app.py:103]
+2018-07-22 22:59:28,761 INFO: Config filename: app/config.py [in config_log_handler:/home/thild/Documents/MyProject/app/app.py:102]
+2018-07-22 22:59:28,763 INFO: App log folder: /home/thild/Documents/MyProject/app/logs [in config_log_handler:/home/thild/Documents/MyProject/app/app.py:103]
+2018-07-22 23:08:45,950 INFO: Config filename: app/config.py [in config_log_handler:/home/thild/Documents/MyProject/app/app.py:102]
+2018-07-22 23:08:45,951 INFO: App log folder: /home/thild/Documents/MyProject/app/logs [in config_log_handler:/home/thild/Documents/MyProject/app/app.py:103]
+2018-07-22 23:09:13,902 INFO: Config filename: app/config.py [in config_log_handler:/home/thild/Documents/MyProject/app/app.py:102]
+2018-07-22 23:09:13,904 INFO: App log folder: /home/thild/Documents/MyProject/app/logs [in config_log_handler:/home/thild/Documents/MyProject/app/app.py:103]
+2018-07-22 23:09:47,562 ERROR: HTTP_STATUS_CODE_400: {'message': u'PERMISSION.DENIED', 'code': 1009} [in api_error_handler:/home/thild/Documents/MyProject/app/exception.py:191]
+Traceback (most recent call last):
+  File "/home/thild/Documents/MyProject/venv/local/lib/python2.7/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/thild/Documents/MyProject/venv/local/lib/python2.7/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/thild/Documents/MyProject/app/utils/decorator.py", line 21, in wrapper
+    raise BadRequest(1009)
+BadRequest
+2018-07-22 23:09:47,562 ERROR: HTTP_STATUS_CODE_400: {'message': u'PERMISSION.DENIED', 'code': 1009} [in api_error_handler:/home/thild/Documents/MyProject/app/exception.py:191]
+Traceback (most recent call last):
+  File "/home/thild/Documents/MyProject/venv/local/lib/python2.7/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/thild/Documents/MyProject/venv/local/lib/python2.7/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/thild/Documents/MyProject/app/utils/decorator.py", line 21, in wrapper
+    raise BadRequest(1009)
+BadRequest
+2018-07-22 23:28:02,958 INFO: Config filename: app/config.py [in config_log_handler:/home/thild/Documents/MyProject/app/app.py:102]
+2018-07-22 23:28:02,961 INFO: App log folder: /home/thild/Documents/MyProject/app/logs [in config_log_handler:/home/thild/Documents/MyProject/app/app.py:103]
+2018-07-22 23:30:40,877 INFO: Config filename: app/config.py [in config_log_handler:/home/thild/Documents/MyProject/app/app.py:102]
+2018-07-22 23:30:40,878 INFO: App log folder: /home/thild/Documents/MyProject/app/logs [in config_log_handler:/home/thild/Documents/MyProject/app/app.py:103]
+2018-07-22 23:35:11,010 INFO: Config filename: app/config.py [in config_log_handler:/home/thild/Documents/MyProject/app/app.py:102]
+2018-07-22 23:35:11,011 INFO: App log folder: /home/thild/Documents/MyProject/app/logs [in config_log_handler:/home/thild/Documents/MyProject/app/app.py:103]
+2018-07-22 23:35:55,502 ERROR: HTTP_STATUS_CODE_400: {'message': u'PERMISSION.DENIED', 'code': 1009} [in api_error_handler:/home/thild/Documents/MyProject/app/exception.py:191]
+Traceback (most recent call last):
+  File "/home/thild/Documents/MyProject/venv/local/lib/python2.7/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/thild/Documents/MyProject/venv/local/lib/python2.7/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/thild/Documents/MyProject/app/utils/decorator.py", line 21, in wrapper
+    raise BadRequest(1009)
+BadRequest
+2018-07-22 23:35:55,502 ERROR: HTTP_STATUS_CODE_400: {'message': u'PERMISSION.DENIED', 'code': 1009} [in api_error_handler:/home/thild/Documents/MyProject/app/exception.py:191]
+Traceback (most recent call last):
+  File "/home/thild/Documents/MyProject/venv/local/lib/python2.7/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/thild/Documents/MyProject/venv/local/lib/python2.7/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/thild/Documents/MyProject/app/utils/decorator.py", line 21, in wrapper
+    raise BadRequest(1009)
+BadRequest
+2018-07-22 23:35:59,235 ERROR: HTTP_STATUS_CODE_400: {'message': u'PERMISSION.DENIED', 'code': 1009} [in api_error_handler:/home/thild/Documents/MyProject/app/exception.py:191]
+Traceback (most recent call last):
+  File "/home/thild/Documents/MyProject/venv/local/lib/python2.7/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/thild/Documents/MyProject/venv/local/lib/python2.7/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/thild/Documents/MyProject/app/utils/decorator.py", line 21, in wrapper
+    raise BadRequest(1009)
+BadRequest
+2018-07-22 23:35:59,235 ERROR: HTTP_STATUS_CODE_400: {'message': u'PERMISSION.DENIED', 'code': 1009} [in api_error_handler:/home/thild/Documents/MyProject/app/exception.py:191]
+Traceback (most recent call last):
+  File "/home/thild/Documents/MyProject/venv/local/lib/python2.7/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/thild/Documents/MyProject/venv/local/lib/python2.7/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/thild/Documents/MyProject/app/utils/decorator.py", line 21, in wrapper
+    raise BadRequest(1009)
+BadRequest
+2018-07-24 06:27:00,433 INFO: Config filename: app/config.py [in config_log_handler:/home/thild/Documents/MyProject/app/app.py:119]
+2018-07-24 06:27:00,436 INFO: App log folder: /home/thild/Documents/MyProject/app/logs [in config_log_handler:/home/thild/Documents/MyProject/app/app.py:120]
+2018-07-24 06:29:13,754 ERROR: HTTP_STATUS_CODE_400: {'message': u'PERMISSION.DENIED', 'code': 1009} [in api_error_handler:/home/thild/Documents/MyProject/app/exception.py:191]
+Traceback (most recent call last):
+  File "/home/thild/Documents/MyProject/venv/local/lib/python2.7/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/thild/Documents/MyProject/venv/local/lib/python2.7/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/thild/Documents/MyProject/app/utils/decorator.py", line 21, in wrapper
+    raise BadRequest(1009)
+BadRequest
+2018-07-24 06:29:13,754 ERROR: HTTP_STATUS_CODE_400: {'message': u'PERMISSION.DENIED', 'code': 1009} [in api_error_handler:/home/thild/Documents/MyProject/app/exception.py:191]
+Traceback (most recent call last):
+  File "/home/thild/Documents/MyProject/venv/local/lib/python2.7/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/thild/Documents/MyProject/venv/local/lib/python2.7/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/thild/Documents/MyProject/app/utils/decorator.py", line 21, in wrapper
+    raise BadRequest(1009)
+BadRequest
+2018-07-24 06:31:21,078 ERROR: HTTP_STATUS_CODE_400: {'message': u'PERMISSION.DENIED', 'code': 1009} [in api_error_handler:/home/thild/Documents/MyProject/app/exception.py:191]
+Traceback (most recent call last):
+  File "/home/thild/Documents/MyProject/venv/local/lib/python2.7/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/thild/Documents/MyProject/venv/local/lib/python2.7/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/thild/Documents/MyProject/app/utils/decorator.py", line 21, in wrapper
+    raise BadRequest(1009)
+BadRequest
+2018-07-24 06:31:21,078 ERROR: HTTP_STATUS_CODE_400: {'message': u'PERMISSION.DENIED', 'code': 1009} [in api_error_handler:/home/thild/Documents/MyProject/app/exception.py:191]
+Traceback (most recent call last):
+  File "/home/thild/Documents/MyProject/venv/local/lib/python2.7/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/thild/Documents/MyProject/venv/local/lib/python2.7/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/thild/Documents/MyProject/app/utils/decorator.py", line 21, in wrapper
+    raise BadRequest(1009)
+BadRequest
+2018-07-24 06:31:22,753 ERROR: HTTP_STATUS_CODE_400: {'message': u'PERMISSION.DENIED', 'code': 1009} [in api_error_handler:/home/thild/Documents/MyProject/app/exception.py:191]
+Traceback (most recent call last):
+  File "/home/thild/Documents/MyProject/venv/local/lib/python2.7/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/thild/Documents/MyProject/venv/local/lib/python2.7/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/thild/Documents/MyProject/app/utils/decorator.py", line 21, in wrapper
+    raise BadRequest(1009)
+BadRequest
+2018-07-24 06:31:22,753 ERROR: HTTP_STATUS_CODE_400: {'message': u'PERMISSION.DENIED', 'code': 1009} [in api_error_handler:/home/thild/Documents/MyProject/app/exception.py:191]
+Traceback (most recent call last):
+  File "/home/thild/Documents/MyProject/venv/local/lib/python2.7/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/thild/Documents/MyProject/venv/local/lib/python2.7/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/thild/Documents/MyProject/app/utils/decorator.py", line 21, in wrapper
+    raise BadRequest(1009)
+BadRequest
+2018-07-24 06:31:35,045 ERROR: HTTP_STATUS_CODE_400: {'message': u'PERMISSION.DENIED', 'code': 1009} [in api_error_handler:/home/thild/Documents/MyProject/app/exception.py:191]
+Traceback (most recent call last):
+  File "/home/thild/Documents/MyProject/venv/local/lib/python2.7/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/thild/Documents/MyProject/venv/local/lib/python2.7/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/thild/Documents/MyProject/app/utils/decorator.py", line 21, in wrapper
+    raise BadRequest(1009)
+BadRequest
+2018-07-24 06:31:35,045 ERROR: HTTP_STATUS_CODE_400: {'message': u'PERMISSION.DENIED', 'code': 1009} [in api_error_handler:/home/thild/Documents/MyProject/app/exception.py:191]
+Traceback (most recent call last):
+  File "/home/thild/Documents/MyProject/venv/local/lib/python2.7/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/thild/Documents/MyProject/venv/local/lib/python2.7/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/thild/Documents/MyProject/app/utils/decorator.py", line 21, in wrapper
+    raise BadRequest(1009)
+BadRequest
+2018-07-24 06:34:34,926 INFO: Config filename: app/config.py [in config_log_handler:/home/thild/Documents/MyProject/app/app.py:119]
+2018-07-24 06:34:34,927 INFO: App log folder: /home/thild/Documents/MyProject/app/logs [in config_log_handler:/home/thild/Documents/MyProject/app/app.py:120]
+2018-07-24 06:42:39,797 INFO: Config filename: app/config.py [in config_log_handler:/home/thild/Documents/MyProject/app/app.py:102]
+2018-07-24 06:42:39,798 INFO: App log folder: /home/thild/Documents/MyProject/app/logs [in config_log_handler:/home/thild/Documents/MyProject/app/app.py:103]
+2018-07-24 06:44:55,357 INFO: Config filename: app/config.py [in config_log_handler:/home/thild/Documents/MyProject/app/app.py:102]
+2018-07-24 06:44:55,358 INFO: App log folder: /home/thild/Documents/MyProject/app/logs [in config_log_handler:/home/thild/Documents/MyProject/app/app.py:103]
+2018-07-24 06:44:57,492 ERROR: HTTP_STATUS_CODE_500: {'message': 'Internal Server Error.', 'code': 500} [in api_error_handler:/home/thild/Documents/MyProject/app/exception.py:191]
+Traceback (most recent call last):
+  File "/home/thild/Documents/MyProject/venv/local/lib/python2.7/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/thild/Documents/MyProject/venv/local/lib/python2.7/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/thild/Documents/MyProject/app/api/user.py", line 104, in refresh
+    access_token = create_access_token(identity=current_user, fresh=False)
+  File "/home/thild/Documents/MyProject/venv/local/lib/python2.7/site-packages/flask_jwt_extended/utils.py", line 115, in create_access_token
+    return jwt_manager._create_access_token(identity, fresh, expires_delta)
+  File "/home/thild/Documents/MyProject/venv/local/lib/python2.7/site-packages/flask_jwt_extended/jwt_manager.py", line 403, in _create_access_token
+    identity=self._user_identity_callback(identity),
+  File "/home/thild/Documents/MyProject/app/api/user.py", line 154, in add_user_identity_to_access_token
+    return user.username
+AttributeError: 'NoneType' object has no attribute 'username'
+2018-07-24 06:44:57,492 ERROR: HTTP_STATUS_CODE_500: {'message': 'Internal Server Error.', 'code': 500} [in api_error_handler:/home/thild/Documents/MyProject/app/exception.py:191]
+Traceback (most recent call last):
+  File "/home/thild/Documents/MyProject/venv/local/lib/python2.7/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/thild/Documents/MyProject/venv/local/lib/python2.7/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/thild/Documents/MyProject/app/api/user.py", line 104, in refresh
+    access_token = create_access_token(identity=current_user, fresh=False)
+  File "/home/thild/Documents/MyProject/venv/local/lib/python2.7/site-packages/flask_jwt_extended/utils.py", line 115, in create_access_token
+    return jwt_manager._create_access_token(identity, fresh, expires_delta)
+  File "/home/thild/Documents/MyProject/venv/local/lib/python2.7/site-packages/flask_jwt_extended/jwt_manager.py", line 403, in _create_access_token
+    identity=self._user_identity_callback(identity),
+  File "/home/thild/Documents/MyProject/app/api/user.py", line 154, in add_user_identity_to_access_token
+    return user.username
+AttributeError: 'NoneType' object has no attribute 'username'
+2018-07-24 06:45:16,606 ERROR: HTTP_STATUS_CODE_500: {'message': 'Internal Server Error.', 'code': 500} [in api_error_handler:/home/thild/Documents/MyProject/app/exception.py:191]
+Traceback (most recent call last):
+  File "/home/thild/Documents/MyProject/venv/local/lib/python2.7/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/thild/Documents/MyProject/venv/local/lib/python2.7/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/thild/Documents/MyProject/app/api/user.py", line 104, in refresh
+    access_token = create_access_token(identity=current_user, fresh=False)
+  File "/home/thild/Documents/MyProject/venv/local/lib/python2.7/site-packages/flask_jwt_extended/utils.py", line 115, in create_access_token
+    return jwt_manager._create_access_token(identity, fresh, expires_delta)
+  File "/home/thild/Documents/MyProject/venv/local/lib/python2.7/site-packages/flask_jwt_extended/jwt_manager.py", line 403, in _create_access_token
+    identity=self._user_identity_callback(identity),
+  File "/home/thild/Documents/MyProject/app/api/user.py", line 154, in add_user_identity_to_access_token
+    return user.username
+AttributeError: 'NoneType' object has no attribute 'username'
+2018-07-24 06:45:16,606 ERROR: HTTP_STATUS_CODE_500: {'message': 'Internal Server Error.', 'code': 500} [in api_error_handler:/home/thild/Documents/MyProject/app/exception.py:191]
+Traceback (most recent call last):
+  File "/home/thild/Documents/MyProject/venv/local/lib/python2.7/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/thild/Documents/MyProject/venv/local/lib/python2.7/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/thild/Documents/MyProject/app/api/user.py", line 104, in refresh
+    access_token = create_access_token(identity=current_user, fresh=False)
+  File "/home/thild/Documents/MyProject/venv/local/lib/python2.7/site-packages/flask_jwt_extended/utils.py", line 115, in create_access_token
+    return jwt_manager._create_access_token(identity, fresh, expires_delta)
+  File "/home/thild/Documents/MyProject/venv/local/lib/python2.7/site-packages/flask_jwt_extended/jwt_manager.py", line 403, in _create_access_token
+    identity=self._user_identity_callback(identity),
+  File "/home/thild/Documents/MyProject/app/api/user.py", line 154, in add_user_identity_to_access_token
+    return user.username
+AttributeError: 'NoneType' object has no attribute 'username'
+2018-07-24 06:47:21,157 INFO: Config filename: app/config.py [in config_log_handler:/home/thild/Documents/MyProject/app/app.py:102]
+2018-07-24 06:47:21,158 INFO: App log folder: /home/thild/Documents/MyProject/app/logs [in config_log_handler:/home/thild/Documents/MyProject/app/app.py:103]
+2018-07-24 06:47:23,648 ERROR: HTTP_STATUS_CODE_500: {'message': 'Internal Server Error.', 'code': 500} [in api_error_handler:/home/thild/Documents/MyProject/app/exception.py:191]
+Traceback (most recent call last):
+  File "/home/thild/Documents/MyProject/venv/local/lib/python2.7/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/thild/Documents/MyProject/venv/local/lib/python2.7/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/thild/Documents/MyProject/app/api/user.py", line 104, in refresh
+    access_token = create_access_token(identity=current_user, fresh=False)
+  File "/home/thild/Documents/MyProject/venv/local/lib/python2.7/site-packages/flask_jwt_extended/utils.py", line 115, in create_access_token
+    return jwt_manager._create_access_token(identity, fresh, expires_delta)
+  File "/home/thild/Documents/MyProject/venv/local/lib/python2.7/site-packages/flask_jwt_extended/jwt_manager.py", line 403, in _create_access_token
+    identity=self._user_identity_callback(identity),
+  File "/home/thild/Documents/MyProject/app/api/user.py", line 154, in add_user_identity_to_access_token
+    return user.username
+AttributeError: 'NoneType' object has no attribute 'username'
+2018-07-24 06:47:23,648 ERROR: HTTP_STATUS_CODE_500: {'message': 'Internal Server Error.', 'code': 500} [in api_error_handler:/home/thild/Documents/MyProject/app/exception.py:191]
+Traceback (most recent call last):
+  File "/home/thild/Documents/MyProject/venv/local/lib/python2.7/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/thild/Documents/MyProject/venv/local/lib/python2.7/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/thild/Documents/MyProject/app/api/user.py", line 104, in refresh
+    access_token = create_access_token(identity=current_user, fresh=False)
+  File "/home/thild/Documents/MyProject/venv/local/lib/python2.7/site-packages/flask_jwt_extended/utils.py", line 115, in create_access_token
+    return jwt_manager._create_access_token(identity, fresh, expires_delta)
+  File "/home/thild/Documents/MyProject/venv/local/lib/python2.7/site-packages/flask_jwt_extended/jwt_manager.py", line 403, in _create_access_token
+    identity=self._user_identity_callback(identity),
+  File "/home/thild/Documents/MyProject/app/api/user.py", line 154, in add_user_identity_to_access_token
+    return user.username
+AttributeError: 'NoneType' object has no attribute 'username'
+2018-07-24 06:48:53,762 ERROR: HTTP_STATUS_CODE_500: {'message': 'Internal Server Error.', 'code': 500} [in api_error_handler:/home/thild/Documents/MyProject/app/exception.py:191]
+Traceback (most recent call last):
+  File "/home/thild/Documents/MyProject/venv/local/lib/python2.7/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/thild/Documents/MyProject/venv/local/lib/python2.7/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/thild/Documents/MyProject/app/api/user.py", line 104, in refresh
+    access_token = create_access_token(identity=current_user, fresh=False)
+  File "/home/thild/Documents/MyProject/venv/local/lib/python2.7/site-packages/flask_jwt_extended/utils.py", line 115, in create_access_token
+    return jwt_manager._create_access_token(identity, fresh, expires_delta)
+  File "/home/thild/Documents/MyProject/venv/local/lib/python2.7/site-packages/flask_jwt_extended/jwt_manager.py", line 403, in _create_access_token
+    identity=self._user_identity_callback(identity),
+  File "/home/thild/Documents/MyProject/app/api/user.py", line 154, in add_user_identity_to_access_token
+    return user.username
+AttributeError: 'NoneType' object has no attribute 'username'
+2018-07-24 06:48:53,762 ERROR: HTTP_STATUS_CODE_500: {'message': 'Internal Server Error.', 'code': 500} [in api_error_handler:/home/thild/Documents/MyProject/app/exception.py:191]
+Traceback (most recent call last):
+  File "/home/thild/Documents/MyProject/venv/local/lib/python2.7/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/thild/Documents/MyProject/venv/local/lib/python2.7/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/thild/Documents/MyProject/app/api/user.py", line 104, in refresh
+    access_token = create_access_token(identity=current_user, fresh=False)
+  File "/home/thild/Documents/MyProject/venv/local/lib/python2.7/site-packages/flask_jwt_extended/utils.py", line 115, in create_access_token
+    return jwt_manager._create_access_token(identity, fresh, expires_delta)
+  File "/home/thild/Documents/MyProject/venv/local/lib/python2.7/site-packages/flask_jwt_extended/jwt_manager.py", line 403, in _create_access_token
+    identity=self._user_identity_callback(identity),
+  File "/home/thild/Documents/MyProject/app/api/user.py", line 154, in add_user_identity_to_access_token
+    return user.username
+AttributeError: 'NoneType' object has no attribute 'username'
+2018-07-24 06:49:07,338 ERROR: HTTP_STATUS_CODE_500: {'message': 'Internal Server Error.', 'code': 500} [in api_error_handler:/home/thild/Documents/MyProject/app/exception.py:191]
+Traceback (most recent call last):
+  File "/home/thild/Documents/MyProject/venv/local/lib/python2.7/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/thild/Documents/MyProject/venv/local/lib/python2.7/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/thild/Documents/MyProject/app/api/user.py", line 104, in refresh
+    access_token = create_access_token(identity=current_user, fresh=False)
+  File "/home/thild/Documents/MyProject/venv/local/lib/python2.7/site-packages/flask_jwt_extended/utils.py", line 115, in create_access_token
+    return jwt_manager._create_access_token(identity, fresh, expires_delta)
+  File "/home/thild/Documents/MyProject/venv/local/lib/python2.7/site-packages/flask_jwt_extended/jwt_manager.py", line 403, in _create_access_token
+    identity=self._user_identity_callback(identity),
+  File "/home/thild/Documents/MyProject/app/api/user.py", line 154, in add_user_identity_to_access_token
+    return user.username
+AttributeError: 'NoneType' object has no attribute 'username'
+2018-07-24 06:49:07,338 ERROR: HTTP_STATUS_CODE_500: {'message': 'Internal Server Error.', 'code': 500} [in api_error_handler:/home/thild/Documents/MyProject/app/exception.py:191]
+Traceback (most recent call last):
+  File "/home/thild/Documents/MyProject/venv/local/lib/python2.7/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/thild/Documents/MyProject/venv/local/lib/python2.7/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/thild/Documents/MyProject/app/api/user.py", line 104, in refresh
+    access_token = create_access_token(identity=current_user, fresh=False)
+  File "/home/thild/Documents/MyProject/venv/local/lib/python2.7/site-packages/flask_jwt_extended/utils.py", line 115, in create_access_token
+    return jwt_manager._create_access_token(identity, fresh, expires_delta)
+  File "/home/thild/Documents/MyProject/venv/local/lib/python2.7/site-packages/flask_jwt_extended/jwt_manager.py", line 403, in _create_access_token
+    identity=self._user_identity_callback(identity),
+  File "/home/thild/Documents/MyProject/app/api/user.py", line 154, in add_user_identity_to_access_token
+    return user.username
+AttributeError: 'NoneType' object has no attribute 'username'
+2018-07-24 06:49:27,035 ERROR: HTTP_STATUS_CODE_500: {'message': 'Internal Server Error.', 'code': 500} [in api_error_handler:/home/thild/Documents/MyProject/app/exception.py:191]
+Traceback (most recent call last):
+  File "/home/thild/Documents/MyProject/venv/local/lib/python2.7/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/thild/Documents/MyProject/venv/local/lib/python2.7/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/thild/Documents/MyProject/app/api/user.py", line 104, in refresh
+    access_token = create_access_token(identity=current_user, fresh=False)
+  File "/home/thild/Documents/MyProject/venv/local/lib/python2.7/site-packages/flask_jwt_extended/utils.py", line 115, in create_access_token
+    return jwt_manager._create_access_token(identity, fresh, expires_delta)
+  File "/home/thild/Documents/MyProject/venv/local/lib/python2.7/site-packages/flask_jwt_extended/jwt_manager.py", line 403, in _create_access_token
+    identity=self._user_identity_callback(identity),
+  File "/home/thild/Documents/MyProject/app/api/user.py", line 154, in add_user_identity_to_access_token
+    return user.username
+AttributeError: 'NoneType' object has no attribute 'username'
+2018-07-24 06:49:27,035 ERROR: HTTP_STATUS_CODE_500: {'message': 'Internal Server Error.', 'code': 500} [in api_error_handler:/home/thild/Documents/MyProject/app/exception.py:191]
+Traceback (most recent call last):
+  File "/home/thild/Documents/MyProject/venv/local/lib/python2.7/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/thild/Documents/MyProject/venv/local/lib/python2.7/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/thild/Documents/MyProject/app/api/user.py", line 104, in refresh
+    access_token = create_access_token(identity=current_user, fresh=False)
+  File "/home/thild/Documents/MyProject/venv/local/lib/python2.7/site-packages/flask_jwt_extended/utils.py", line 115, in create_access_token
+    return jwt_manager._create_access_token(identity, fresh, expires_delta)
+  File "/home/thild/Documents/MyProject/venv/local/lib/python2.7/site-packages/flask_jwt_extended/jwt_manager.py", line 403, in _create_access_token
+    identity=self._user_identity_callback(identity),
+  File "/home/thild/Documents/MyProject/app/api/user.py", line 154, in add_user_identity_to_access_token
+    return user.username
+AttributeError: 'NoneType' object has no attribute 'username'
+2018-07-24 06:55:22,872 INFO: Config filename: app/config.py [in config_log_handler:/home/thild/Documents/MyProject/app/app.py:102]
+2018-07-24 06:55:22,873 INFO: App log folder: /home/thild/Documents/MyProject/app/logs [in config_log_handler:/home/thild/Documents/MyProject/app/app.py:103]
+2018-07-24 06:58:28,509 INFO: Config filename: app/config.py [in config_log_handler:/home/thild/Documents/MyProject/app/app.py:102]
+2018-07-24 06:58:28,510 INFO: App log folder: /home/thild/Documents/MyProject/app/logs [in config_log_handler:/home/thild/Documents/MyProject/app/app.py:103]
+2018-07-24 07:01:19,363 INFO: Config filename: app/config.py [in config_log_handler:/home/thild/Documents/MyProject/app/app.py:102]
+2018-07-24 07:01:19,363 INFO: App log folder: /home/thild/Documents/MyProject/app/logs [in config_log_handler:/home/thild/Documents/MyProject/app/app.py:103]
+2018-07-24 07:01:55,175 ERROR: HTTP_STATUS_CODE_400: {'message': u'PERMISSION.DENIED', 'code': 1009} [in api_error_handler:/home/thild/Documents/MyProject/app/exception.py:191]
+Traceback (most recent call last):
+  File "/home/thild/Documents/MyProject/venv/local/lib/python2.7/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/thild/Documents/MyProject/venv/local/lib/python2.7/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/thild/Documents/MyProject/app/utils/decorator.py", line 22, in wrapper
+    raise BadRequest(1009)
+BadRequest
+2018-07-24 07:01:55,175 ERROR: HTTP_STATUS_CODE_400: {'message': u'PERMISSION.DENIED', 'code': 1009} [in api_error_handler:/home/thild/Documents/MyProject/app/exception.py:191]
+Traceback (most recent call last):
+  File "/home/thild/Documents/MyProject/venv/local/lib/python2.7/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/thild/Documents/MyProject/venv/local/lib/python2.7/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/thild/Documents/MyProject/app/utils/decorator.py", line 22, in wrapper
+    raise BadRequest(1009)
+BadRequest
+2018-07-24 21:55:47,268 INFO: Config filename: app/config.py [in config_log_handler:/home/thild/Documents/MyProject/app/app.py:102]
+2018-07-24 21:55:47,272 INFO: App log folder: /home/thild/Documents/MyProject/app/logs [in config_log_handler:/home/thild/Documents/MyProject/app/app.py:103]
+2018-07-24 22:07:56,258 INFO: Config filename: app/config.py [in config_log_handler:/home/thild/Documents/MyProject/app/app.py:102]
+2018-07-24 22:07:56,263 INFO: App log folder: /home/thild/Documents/MyProject/app/logs [in config_log_handler:/home/thild/Documents/MyProject/app/app.py:103]
+2018-07-24 22:09:01,082 ERROR: HTTP_STATUS_CODE_400: {'message': u'PERMISSION.DENIED', 'code': 1009} [in api_error_handler:/home/thild/Documents/MyProject/app/exception.py:191]
+Traceback (most recent call last):
+  File "/home/thild/Documents/MyProject/venv/local/lib/python2.7/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/thild/Documents/MyProject/venv/local/lib/python2.7/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/thild/Documents/MyProject/app/utils/decorator.py", line 22, in wrapper
+    raise BadRequest(1009)
+BadRequest
+2018-07-24 22:09:01,082 ERROR: HTTP_STATUS_CODE_400: {'message': u'PERMISSION.DENIED', 'code': 1009} [in api_error_handler:/home/thild/Documents/MyProject/app/exception.py:191]
+Traceback (most recent call last):
+  File "/home/thild/Documents/MyProject/venv/local/lib/python2.7/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/thild/Documents/MyProject/venv/local/lib/python2.7/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/thild/Documents/MyProject/app/utils/decorator.py", line 22, in wrapper
+    raise BadRequest(1009)
+BadRequest
+2018-07-24 22:13:36,188 INFO: Config filename: app/config.py [in config_log_handler:/home/thild/Documents/MyProject/app/app.py:101]
+2018-07-24 22:13:36,191 INFO: App log folder: /home/thild/Documents/MyProject/app/logs [in config_log_handler:/home/thild/Documents/MyProject/app/app.py:102]
+2018-07-24 22:18:44,267 INFO: Config filename: app/config.py [in config_log_handler:/home/thild/Documents/MyProject/app/app.py:101]
+2018-07-24 22:18:44,269 INFO: App log folder: /home/thild/Documents/MyProject/app/logs [in config_log_handler:/home/thild/Documents/MyProject/app/app.py:102]
+2018-07-24 22:29:44,556 ERROR: HTTP_STATUS_CODE_500: {'message': 'Internal Server Error.', 'code': 500} [in api_error_handler:/home/thild/Documents/MyProject/app/exception.py:191]
+Traceback (most recent call last):
+  File "/home/thild/Documents/MyProject/venv/local/lib/python2.7/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/thild/Documents/MyProject/venv/local/lib/python2.7/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/thild/Documents/MyProject/app/api/user.py", line 47, in login
+    error_messages={'required': gettext('USERNAME.REQUIRED')}
+  File "/home/thild/Documents/MyProject/venv/local/lib/python2.7/site-packages/flask_babel/__init__.py", line 552, in gettext
+    t = get_translations()
+  File "/home/thild/Documents/MyProject/venv/local/lib/python2.7/site-packages/flask_babel/__init__.py", line 227, in get_translations
+    [get_locale()],
+  File "/home/thild/Documents/MyProject/venv/local/lib/python2.7/site-packages/flask_babel/__init__.py", line 257, in get_locale
+    rv = babel.locale_selector_func()
+  File "/home/thild/Documents/MyProject/manage.py", line 22, in get_locale
+    locale = request.header.get('locale', 'en')
+  File "/home/thild/Documents/MyProject/venv/local/lib/python2.7/site-packages/werkzeug/local.py", line 347, in __getattr__
+    return getattr(self._get_current_object(), name)
+AttributeError: 'Request' object has no attribute 'header'
+2018-07-24 22:29:44,556 ERROR: HTTP_STATUS_CODE_500: {'message': 'Internal Server Error.', 'code': 500} [in api_error_handler:/home/thild/Documents/MyProject/app/exception.py:191]
+Traceback (most recent call last):
+  File "/home/thild/Documents/MyProject/venv/local/lib/python2.7/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/thild/Documents/MyProject/venv/local/lib/python2.7/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/thild/Documents/MyProject/app/api/user.py", line 47, in login
+    error_messages={'required': gettext('USERNAME.REQUIRED')}
+  File "/home/thild/Documents/MyProject/venv/local/lib/python2.7/site-packages/flask_babel/__init__.py", line 552, in gettext
+    t = get_translations()
+  File "/home/thild/Documents/MyProject/venv/local/lib/python2.7/site-packages/flask_babel/__init__.py", line 227, in get_translations
+    [get_locale()],
+  File "/home/thild/Documents/MyProject/venv/local/lib/python2.7/site-packages/flask_babel/__init__.py", line 257, in get_locale
+    rv = babel.locale_selector_func()
+  File "/home/thild/Documents/MyProject/manage.py", line 22, in get_locale
+    locale = request.header.get('locale', 'en')
+  File "/home/thild/Documents/MyProject/venv/local/lib/python2.7/site-packages/werkzeug/local.py", line 347, in __getattr__
+    return getattr(self._get_current_object(), name)
+AttributeError: 'Request' object has no attribute 'header'
+2018-07-24 22:30:48,243 INFO: Config filename: app/config.py [in config_log_handler:/home/thild/Documents/MyProject/app/app.py:101]
+2018-07-24 22:30:48,244 INFO: App log folder: /home/thild/Documents/MyProject/app/logs [in config_log_handler:/home/thild/Documents/MyProject/app/app.py:102]
+2018-07-24 22:30:53,317 ERROR: HTTP_STATUS_CODE_500: {'message': 'Internal Server Error.', 'code': 500} [in api_error_handler:/home/thild/Documents/MyProject/app/exception.py:191]
+Traceback (most recent call last):
+  File "/home/thild/Documents/MyProject/venv/local/lib/python2.7/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/thild/Documents/MyProject/venv/local/lib/python2.7/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/thild/Documents/MyProject/app/api/user.py", line 47, in login
+    error_messages={'required': gettext('USERNAME.REQUIRED')}
+  File "/home/thild/Documents/MyProject/venv/local/lib/python2.7/site-packages/flask_babel/__init__.py", line 552, in gettext
+    t = get_translations()
+  File "/home/thild/Documents/MyProject/venv/local/lib/python2.7/site-packages/flask_babel/__init__.py", line 227, in get_translations
+    [get_locale()],
+  File "/home/thild/Documents/MyProject/venv/local/lib/python2.7/site-packages/flask_babel/__init__.py", line 257, in get_locale
+    rv = babel.locale_selector_func()
+  File "/home/thild/Documents/MyProject/manage.py", line 22, in get_locale
+    if 'locale' in request.header:
+  File "/home/thild/Documents/MyProject/venv/local/lib/python2.7/site-packages/werkzeug/local.py", line 347, in __getattr__
+    return getattr(self._get_current_object(), name)
+AttributeError: 'Request' object has no attribute 'header'
+2018-07-24 22:30:53,317 ERROR: HTTP_STATUS_CODE_500: {'message': 'Internal Server Error.', 'code': 500} [in api_error_handler:/home/thild/Documents/MyProject/app/exception.py:191]
+Traceback (most recent call last):
+  File "/home/thild/Documents/MyProject/venv/local/lib/python2.7/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/thild/Documents/MyProject/venv/local/lib/python2.7/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/thild/Documents/MyProject/app/api/user.py", line 47, in login
+    error_messages={'required': gettext('USERNAME.REQUIRED')}
+  File "/home/thild/Documents/MyProject/venv/local/lib/python2.7/site-packages/flask_babel/__init__.py", line 552, in gettext
+    t = get_translations()
+  File "/home/thild/Documents/MyProject/venv/local/lib/python2.7/site-packages/flask_babel/__init__.py", line 227, in get_translations
+    [get_locale()],
+  File "/home/thild/Documents/MyProject/venv/local/lib/python2.7/site-packages/flask_babel/__init__.py", line 257, in get_locale
+    rv = babel.locale_selector_func()
+  File "/home/thild/Documents/MyProject/manage.py", line 22, in get_locale
+    if 'locale' in request.header:
+  File "/home/thild/Documents/MyProject/venv/local/lib/python2.7/site-packages/werkzeug/local.py", line 347, in __getattr__
+    return getattr(self._get_current_object(), name)
+AttributeError: 'Request' object has no attribute 'header'
+2018-07-24 22:32:23,456 INFO: Config filename: app/config.py [in config_log_handler:/home/thild/Documents/MyProject/app/app.py:101]
+2018-07-24 22:32:23,457 INFO: App log folder: /home/thild/Documents/MyProject/app/logs [in config_log_handler:/home/thild/Documents/MyProject/app/app.py:102]
+2018-07-24 22:32:25,850 ERROR: HTTP_STATUS_CODE_500: {'message': 'Internal Server Error.', 'code': 500} [in api_error_handler:/home/thild/Documents/MyProject/app/exception.py:191]
+Traceback (most recent call last):
+  File "/home/thild/Documents/MyProject/venv/local/lib/python2.7/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/thild/Documents/MyProject/venv/local/lib/python2.7/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/thild/Documents/MyProject/app/api/user.py", line 47, in login
+    error_messages={'required': gettext('USERNAME.REQUIRED')}
+  File "/home/thild/Documents/MyProject/venv/local/lib/python2.7/site-packages/flask_babel/__init__.py", line 552, in gettext
+    t = get_translations()
+  File "/home/thild/Documents/MyProject/venv/local/lib/python2.7/site-packages/flask_babel/__init__.py", line 227, in get_translations
+    [get_locale()],
+  File "/home/thild/Documents/MyProject/venv/local/lib/python2.7/site-packages/flask_babel/__init__.py", line 257, in get_locale
+    rv = babel.locale_selector_func()
+  File "/home/thild/Documents/MyProject/manage.py", line 22, in get_locale
+    locale = request.headers.get_json('locale', 'en')
+AttributeError: 'EnvironHeaders' object has no attribute 'get_json'
+2018-07-24 22:32:25,850 ERROR: HTTP_STATUS_CODE_500: {'message': 'Internal Server Error.', 'code': 500} [in api_error_handler:/home/thild/Documents/MyProject/app/exception.py:191]
+Traceback (most recent call last):
+  File "/home/thild/Documents/MyProject/venv/local/lib/python2.7/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/thild/Documents/MyProject/venv/local/lib/python2.7/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/thild/Documents/MyProject/app/api/user.py", line 47, in login
+    error_messages={'required': gettext('USERNAME.REQUIRED')}
+  File "/home/thild/Documents/MyProject/venv/local/lib/python2.7/site-packages/flask_babel/__init__.py", line 552, in gettext
+    t = get_translations()
+  File "/home/thild/Documents/MyProject/venv/local/lib/python2.7/site-packages/flask_babel/__init__.py", line 227, in get_translations
+    [get_locale()],
+  File "/home/thild/Documents/MyProject/venv/local/lib/python2.7/site-packages/flask_babel/__init__.py", line 257, in get_locale
+    rv = babel.locale_selector_func()
+  File "/home/thild/Documents/MyProject/manage.py", line 22, in get_locale
+    locale = request.headers.get_json('locale', 'en')
+AttributeError: 'EnvironHeaders' object has no attribute 'get_json'
+2018-07-24 22:32:49,604 INFO: Config filename: app/config.py [in config_log_handler:/home/thild/Documents/MyProject/app/app.py:101]
+2018-07-24 22:32:49,605 INFO: App log folder: /home/thild/Documents/MyProject/app/logs [in config_log_handler:/home/thild/Documents/MyProject/app/app.py:102]
+2018-07-24 22:32:51,766 ERROR: HTTP_STATUS_CODE_500: {'message': 'Internal Server Error.', 'code': 500} [in api_error_handler:/home/thild/Documents/MyProject/app/exception.py:191]
+Traceback (most recent call last):
+  File "/home/thild/Documents/MyProject/venv/local/lib/python2.7/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/thild/Documents/MyProject/venv/local/lib/python2.7/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/thild/Documents/MyProject/app/api/user.py", line 47, in login
+    error_messages={'required': gettext('USERNAME.REQUIRED')}
+  File "/home/thild/Documents/MyProject/venv/local/lib/python2.7/site-packages/flask_babel/__init__.py", line 552, in gettext
+    t = get_translations()
+  File "/home/thild/Documents/MyProject/venv/local/lib/python2.7/site-packages/flask_babel/__init__.py", line 227, in get_translations
+    [get_locale()],
+  File "/home/thild/Documents/MyProject/venv/local/lib/python2.7/site-packages/flask_babel/__init__.py", line 257, in get_locale
+    rv = babel.locale_selector_func()
+  File "/home/thild/Documents/MyProject/manage.py", line 22, in get_locale
+    locale = request.headers.json.get('locale', 'en')
+AttributeError: 'EnvironHeaders' object has no attribute 'json'
+2018-07-24 22:32:51,766 ERROR: HTTP_STATUS_CODE_500: {'message': 'Internal Server Error.', 'code': 500} [in api_error_handler:/home/thild/Documents/MyProject/app/exception.py:191]
+Traceback (most recent call last):
+  File "/home/thild/Documents/MyProject/venv/local/lib/python2.7/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/thild/Documents/MyProject/venv/local/lib/python2.7/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/thild/Documents/MyProject/app/api/user.py", line 47, in login
+    error_messages={'required': gettext('USERNAME.REQUIRED')}
+  File "/home/thild/Documents/MyProject/venv/local/lib/python2.7/site-packages/flask_babel/__init__.py", line 552, in gettext
+    t = get_translations()
+  File "/home/thild/Documents/MyProject/venv/local/lib/python2.7/site-packages/flask_babel/__init__.py", line 227, in get_translations
+    [get_locale()],
+  File "/home/thild/Documents/MyProject/venv/local/lib/python2.7/site-packages/flask_babel/__init__.py", line 257, in get_locale
+    rv = babel.locale_selector_func()
+  File "/home/thild/Documents/MyProject/manage.py", line 22, in get_locale
+    locale = request.headers.json.get('locale', 'en')
+AttributeError: 'EnvironHeaders' object has no attribute 'json'
+2018-07-24 22:34:43,760 INFO: Config filename: app/config.py [in config_log_handler:/home/thild/Documents/MyProject/app/app.py:101]
+2018-07-24 22:34:43,762 INFO: App log folder: /home/thild/Documents/MyProject/app/logs [in config_log_handler:/home/thild/Documents/MyProject/app/app.py:102]
+2018-07-24 22:35:31,123 ERROR: HTTP_STATUS_CODE_400: {'message': u'PERMISSION.DENIED', 'code': 1009} [in api_error_handler:/home/thild/Documents/MyProject/app/exception.py:191]
+Traceback (most recent call last):
+  File "/home/thild/Documents/MyProject/venv/local/lib/python2.7/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/thild/Documents/MyProject/venv/local/lib/python2.7/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/thild/Documents/MyProject/app/utils/decorator.py", line 22, in wrapper
+    raise BadRequest(1009)
+BadRequest
+2018-07-24 22:35:31,123 ERROR: HTTP_STATUS_CODE_400: {'message': u'PERMISSION.DENIED', 'code': 1009} [in api_error_handler:/home/thild/Documents/MyProject/app/exception.py:191]
+Traceback (most recent call last):
+  File "/home/thild/Documents/MyProject/venv/local/lib/python2.7/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/thild/Documents/MyProject/venv/local/lib/python2.7/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/thild/Documents/MyProject/app/utils/decorator.py", line 22, in wrapper
+    raise BadRequest(1009)
+BadRequest
+2018-07-24 22:35:46,637 ERROR: HTTP_STATUS_CODE_400: {'message': u'PERMISSION.DENIED', 'code': 1009} [in api_error_handler:/home/thild/Documents/MyProject/app/exception.py:191]
+Traceback (most recent call last):
+  File "/home/thild/Documents/MyProject/venv/local/lib/python2.7/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/thild/Documents/MyProject/venv/local/lib/python2.7/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/thild/Documents/MyProject/app/utils/decorator.py", line 22, in wrapper
+    raise BadRequest(1009)
+BadRequest
+2018-07-24 22:35:46,637 ERROR: HTTP_STATUS_CODE_400: {'message': u'PERMISSION.DENIED', 'code': 1009} [in api_error_handler:/home/thild/Documents/MyProject/app/exception.py:191]
+Traceback (most recent call last):
+  File "/home/thild/Documents/MyProject/venv/local/lib/python2.7/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/thild/Documents/MyProject/venv/local/lib/python2.7/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/thild/Documents/MyProject/app/utils/decorator.py", line 22, in wrapper
+    raise BadRequest(1009)
+BadRequest
+2018-07-24 22:35:49,005 ERROR: HTTP_STATUS_CODE_400: {'message': u'PERMISSION.DENIED', 'code': 1009} [in api_error_handler:/home/thild/Documents/MyProject/app/exception.py:191]
+Traceback (most recent call last):
+  File "/home/thild/Documents/MyProject/venv/local/lib/python2.7/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/thild/Documents/MyProject/venv/local/lib/python2.7/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/thild/Documents/MyProject/app/utils/decorator.py", line 22, in wrapper
+    raise BadRequest(1009)
+BadRequest
+2018-07-24 22:35:49,005 ERROR: HTTP_STATUS_CODE_400: {'message': u'PERMISSION.DENIED', 'code': 1009} [in api_error_handler:/home/thild/Documents/MyProject/app/exception.py:191]
+Traceback (most recent call last):
+  File "/home/thild/Documents/MyProject/venv/local/lib/python2.7/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/thild/Documents/MyProject/venv/local/lib/python2.7/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/thild/Documents/MyProject/app/utils/decorator.py", line 22, in wrapper
+    raise BadRequest(1009)
+BadRequest
+2018-07-24 22:36:19,283 ERROR: HTTP_STATUS_CODE_400: {'message': u'PERMISSION.DENIED', 'code': 1009} [in api_error_handler:/home/thild/Documents/MyProject/app/exception.py:191]
+Traceback (most recent call last):
+  File "/home/thild/Documents/MyProject/venv/local/lib/python2.7/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/thild/Documents/MyProject/venv/local/lib/python2.7/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/thild/Documents/MyProject/app/utils/decorator.py", line 22, in wrapper
+    raise BadRequest(1009)
+BadRequest
+2018-07-24 22:36:19,283 ERROR: HTTP_STATUS_CODE_400: {'message': u'PERMISSION.DENIED', 'code': 1009} [in api_error_handler:/home/thild/Documents/MyProject/app/exception.py:191]
+Traceback (most recent call last):
+  File "/home/thild/Documents/MyProject/venv/local/lib/python2.7/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/thild/Documents/MyProject/venv/local/lib/python2.7/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/thild/Documents/MyProject/app/utils/decorator.py", line 22, in wrapper
+    raise BadRequest(1009)
+BadRequest
+2018-07-24 22:36:32,538 ERROR: HTTP_STATUS_CODE_400: {'message': u'PERMISSION.DENIED', 'code': 1009} [in api_error_handler:/home/thild/Documents/MyProject/app/exception.py:191]
+Traceback (most recent call last):
+  File "/home/thild/Documents/MyProject/venv/local/lib/python2.7/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/thild/Documents/MyProject/venv/local/lib/python2.7/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/thild/Documents/MyProject/app/utils/decorator.py", line 22, in wrapper
+    raise BadRequest(1009)
+BadRequest
+2018-07-24 22:36:32,538 ERROR: HTTP_STATUS_CODE_400: {'message': u'PERMISSION.DENIED', 'code': 1009} [in api_error_handler:/home/thild/Documents/MyProject/app/exception.py:191]
+Traceback (most recent call last):
+  File "/home/thild/Documents/MyProject/venv/local/lib/python2.7/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/thild/Documents/MyProject/venv/local/lib/python2.7/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/thild/Documents/MyProject/app/utils/decorator.py", line 22, in wrapper
+    raise BadRequest(1009)
+BadRequest
+2018-07-24 22:39:24,203 ERROR: HTTP_STATUS_CODE_400: {'message': u'PERMISSION.DENIED', 'code': 1009} [in api_error_handler:/home/thild/Documents/MyProject/app/exception.py:191]
+Traceback (most recent call last):
+  File "/home/thild/Documents/MyProject/venv/local/lib/python2.7/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/thild/Documents/MyProject/venv/local/lib/python2.7/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/thild/Documents/MyProject/app/utils/decorator.py", line 22, in wrapper
+    raise BadRequest(1009)
+BadRequest
+2018-07-24 22:39:24,203 ERROR: HTTP_STATUS_CODE_400: {'message': u'PERMISSION.DENIED', 'code': 1009} [in api_error_handler:/home/thild/Documents/MyProject/app/exception.py:191]
+Traceback (most recent call last):
+  File "/home/thild/Documents/MyProject/venv/local/lib/python2.7/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/thild/Documents/MyProject/venv/local/lib/python2.7/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/thild/Documents/MyProject/app/utils/decorator.py", line 22, in wrapper
+    raise BadRequest(1009)
+BadRequest
+2018-07-24 22:43:27,526 ERROR: HTTP_STATUS_CODE_500: {'message': 'Internal Server Error.', 'code': 500} [in api_error_handler:/home/thild/Documents/MyProject/app/exception.py:191]
+Traceback (most recent call last):
+  File "/home/thild/Documents/MyProject/venv/local/lib/python2.7/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/thild/Documents/MyProject/venv/local/lib/python2.7/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/thild/Documents/MyProject/venv/local/lib/python2.7/site-packages/flask_jwt_extended/view_decorators.py", line 153, in wrapper
+    return fn(*args, **kwargs)
+  File "/home/thild/Documents/MyProject/app/api/user.py", line 105, in refresh
+    access_token = create_access_token(identity=current_user, fresh=False)
+  File "/home/thild/Documents/MyProject/venv/local/lib/python2.7/site-packages/flask_jwt_extended/utils.py", line 115, in create_access_token
+    return jwt_manager._create_access_token(identity, fresh, expires_delta)
+  File "/home/thild/Documents/MyProject/venv/local/lib/python2.7/site-packages/flask_jwt_extended/jwt_manager.py", line 403, in _create_access_token
+    identity=self._user_identity_callback(identity),
+  File "/home/thild/Documents/MyProject/app/api/user.py", line 156, in add_user_identity_to_access_token
+    return user.username
+AttributeError: 'unicode' object has no attribute 'username'
+2018-07-24 22:43:27,526 ERROR: HTTP_STATUS_CODE_500: {'message': 'Internal Server Error.', 'code': 500} [in api_error_handler:/home/thild/Documents/MyProject/app/exception.py:191]
+Traceback (most recent call last):
+  File "/home/thild/Documents/MyProject/venv/local/lib/python2.7/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/thild/Documents/MyProject/venv/local/lib/python2.7/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/thild/Documents/MyProject/venv/local/lib/python2.7/site-packages/flask_jwt_extended/view_decorators.py", line 153, in wrapper
+    return fn(*args, **kwargs)
+  File "/home/thild/Documents/MyProject/app/api/user.py", line 105, in refresh
+    access_token = create_access_token(identity=current_user, fresh=False)
+  File "/home/thild/Documents/MyProject/venv/local/lib/python2.7/site-packages/flask_jwt_extended/utils.py", line 115, in create_access_token
+    return jwt_manager._create_access_token(identity, fresh, expires_delta)
+  File "/home/thild/Documents/MyProject/venv/local/lib/python2.7/site-packages/flask_jwt_extended/jwt_manager.py", line 403, in _create_access_token
+    identity=self._user_identity_callback(identity),
+  File "/home/thild/Documents/MyProject/app/api/user.py", line 156, in add_user_identity_to_access_token
+    return user.username
+AttributeError: 'unicode' object has no attribute 'username'
+2018-07-24 22:44:19,353 INFO: Config filename: app/config.py [in config_log_handler:/home/thild/Documents/MyProject/app/app.py:101]
+2018-07-24 22:44:19,358 INFO: App log folder: /home/thild/Documents/MyProject/app/logs [in config_log_handler:/home/thild/Documents/MyProject/app/app.py:102]
+2018-07-24 22:44:52,005 INFO: Config filename: app/config.py [in config_log_handler:/home/thild/Documents/MyProject/app/app.py:101]
+2018-07-24 22:44:52,006 INFO: App log folder: /home/thild/Documents/MyProject/app/logs [in config_log_handler:/home/thild/Documents/MyProject/app/app.py:102]
+2018-07-24 23:10:05,670 INFO: Config filename: app/config.py [in config_log_handler:/home/thild/Documents/MyProject/app/app.py:101]
+2018-07-24 23:10:05,671 INFO: App log folder: /home/thild/Documents/MyProject/app/logs [in config_log_handler:/home/thild/Documents/MyProject/app/app.py:102]
+2019-06-03 08:57:02,917 INFO: Config filename: app/config.py [in config_log_handler:/home/vuns/Desktop/flask-project-master/app/app.py:101]
+2019-06-03 08:57:02,929 INFO: App log folder: /home/vuns/Desktop/flask-project-master/app/logs [in config_log_handler:/home/vuns/Desktop/flask-project-master/app/app.py:102]
+2019-06-03 09:14:24,077 INFO: Config filename: app/config.py [in config_log_handler:/home/vuns/Desktop/flask-project-master/app/app.py:102]
+2019-06-03 09:14:24,078 INFO: App log folder: /home/vuns/Desktop/flask-project-master/app/logs [in config_log_handler:/home/vuns/Desktop/flask-project-master/app/app.py:103]
+2019-06-03 09:20:28,139 INFO: Config filename: app/config.py [in config_log_handler:/home/vuns/Desktop/flask-project-master/app/app.py:102]
+2019-06-03 09:20:28,141 INFO: App log folder: /home/vuns/Desktop/flask-project-master/app/logs [in config_log_handler:/home/vuns/Desktop/flask-project-master/app/app.py:103]
+2019-06-03 09:35:44,372 INFO: Config filename: app/config.py [in config_log_handler:/home/vuns/Desktop/flask-project-master/app/app.py:102]
+2019-06-03 09:35:44,373 INFO: App log folder: /home/vuns/Desktop/flask-project-master/app/logs [in config_log_handler:/home/vuns/Desktop/flask-project-master/app/app.py:103]
+2019-06-03 09:36:10,612 INFO: Config filename: app/config.py [in config_log_handler:/home/vuns/Desktop/flask-project-master/app/app.py:102]
+2019-06-03 09:36:10,613 INFO: App log folder: /home/vuns/Desktop/flask-project-master/app/logs [in config_log_handler:/home/vuns/Desktop/flask-project-master/app/app.py:103]
+2019-06-03 09:36:39,848 ERROR: HTTP_STATUS_CODE_405: {'message': 'Method Not Allowed.', 'code': 405} [in api_error_handler:/home/vuns/Desktop/flask-project-master/app/exception.py:191]
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1832, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1810, in dispatch_request
+    self.raise_routing_exception(req)
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1793, in raise_routing_exception
+    raise request.routing_exception
+MethodNotAllowed: 405 Method Not Allowed: {'message': 'Method Not Allowed.', 'code': 405}
+2019-06-03 09:36:39,848 ERROR: HTTP_STATUS_CODE_405: {'message': 'Method Not Allowed.', 'code': 405} [in api_error_handler:/home/vuns/Desktop/flask-project-master/app/exception.py:191]
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1832, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1810, in dispatch_request
+    self.raise_routing_exception(req)
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1793, in raise_routing_exception
+    raise request.routing_exception
+MethodNotAllowed: 405 Method Not Allowed: {'message': 'Method Not Allowed.', 'code': 405}
+2019-06-03 09:37:07,943 INFO: Config filename: app/config.py [in config_log_handler:/home/vuns/Desktop/flask-project-master/app/app.py:102]
+2019-06-03 09:37:07,945 INFO: App log folder: /home/vuns/Desktop/flask-project-master/app/logs [in config_log_handler:/home/vuns/Desktop/flask-project-master/app/app.py:103]
+2019-06-03 09:37:14,695 ERROR: HTTP_STATUS_CODE_500: {'message': 'Internal Server Error.', 'code': 500} [in api_error_handler:/home/vuns/Desktop/flask-project-master/app/exception.py:191]
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1832, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1818, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/vuns/Desktop/flask-project-master/app/api/chicken_farm_control.py", line 27, in feeding
+    control_feeding(status)
+  File "/home/vuns/Desktop/flask-project-master/app/utils/farm_control.py", line 7, in control_feeding
+    publish.single(current_app.config['FEEDING_TOPIC'], '1', hostname=current_app.config['MQT_SERVER'])
+AttributeError: 'module' object has no attribute 'single'
+2019-06-03 09:37:14,695 ERROR: HTTP_STATUS_CODE_500: {'message': 'Internal Server Error.', 'code': 500} [in api_error_handler:/home/vuns/Desktop/flask-project-master/app/exception.py:191]
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1832, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1818, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/vuns/Desktop/flask-project-master/app/api/chicken_farm_control.py", line 27, in feeding
+    control_feeding(status)
+  File "/home/vuns/Desktop/flask-project-master/app/utils/farm_control.py", line 7, in control_feeding
+    publish.single(current_app.config['FEEDING_TOPIC'], '1', hostname=current_app.config['MQT_SERVER'])
+AttributeError: 'module' object has no attribute 'single'
+2019-06-03 09:37:55,727 ERROR: HTTP_STATUS_CODE_500: {'message': 'Internal Server Error.', 'code': 500} [in api_error_handler:/home/vuns/Desktop/flask-project-master/app/exception.py:191]
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1832, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1818, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/vuns/Desktop/flask-project-master/app/api/chicken_farm_control.py", line 27, in feeding
+    control_feeding(status)
+  File "/home/vuns/Desktop/flask-project-master/app/utils/farm_control.py", line 7, in control_feeding
+    publish.single(current_app.config['FEEDING_TOPIC'], '1', hostname=current_app.config['MQT_SERVER'])
+AttributeError: 'module' object has no attribute 'single'
+2019-06-03 09:37:55,727 ERROR: HTTP_STATUS_CODE_500: {'message': 'Internal Server Error.', 'code': 500} [in api_error_handler:/home/vuns/Desktop/flask-project-master/app/exception.py:191]
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1832, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1818, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/vuns/Desktop/flask-project-master/app/api/chicken_farm_control.py", line 27, in feeding
+    control_feeding(status)
+  File "/home/vuns/Desktop/flask-project-master/app/utils/farm_control.py", line 7, in control_feeding
+    publish.single(current_app.config['FEEDING_TOPIC'], '1', hostname=current_app.config['MQT_SERVER'])
+AttributeError: 'module' object has no attribute 'single'
+2019-06-03 09:38:48,854 INFO: Config filename: app/config.py [in config_log_handler:/home/vuns/Desktop/flask-project-master/app/app.py:102]
+2019-06-03 09:38:48,855 INFO: App log folder: /home/vuns/Desktop/flask-project-master/app/logs [in config_log_handler:/home/vuns/Desktop/flask-project-master/app/app.py:103]
+2019-06-03 09:39:12,862 ERROR: HTTP_STATUS_CODE_500: {'message': 'Internal Server Error.', 'code': 500} [in api_error_handler:/home/vuns/Desktop/flask-project-master/app/exception.py:191]
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1832, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1818, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/vuns/Desktop/flask-project-master/app/api/chicken_farm_control.py", line 27, in feeding
+    control_feeding(status)
+  File "/home/vuns/Desktop/flask-project-master/app/utils/farm_control.py", line 8, in control_feeding
+    publish.single(current_app.config['FEEDING_TOPIC'], '1', hostname=current_app.config['MQT_SERVER'])
+AttributeError: 'module' object has no attribute 'single'
+2019-06-03 09:39:12,862 ERROR: HTTP_STATUS_CODE_500: {'message': 'Internal Server Error.', 'code': 500} [in api_error_handler:/home/vuns/Desktop/flask-project-master/app/exception.py:191]
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1832, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1818, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/vuns/Desktop/flask-project-master/app/api/chicken_farm_control.py", line 27, in feeding
+    control_feeding(status)
+  File "/home/vuns/Desktop/flask-project-master/app/utils/farm_control.py", line 8, in control_feeding
+    publish.single(current_app.config['FEEDING_TOPIC'], '1', hostname=current_app.config['MQT_SERVER'])
+AttributeError: 'module' object has no attribute 'single'
+2019-06-03 09:39:36,105 INFO: Config filename: app/config.py [in config_log_handler:/home/vuns/Desktop/flask-project-master/app/app.py:102]
+2019-06-03 09:39:36,107 INFO: App log folder: /home/vuns/Desktop/flask-project-master/app/logs [in config_log_handler:/home/vuns/Desktop/flask-project-master/app/app.py:103]
+2019-06-03 10:01:44,309 INFO: Config filename: app/config.py [in config_log_handler:/home/vuns/Desktop/flask-project-master/app/app.py:102]
+2019-06-03 10:01:44,310 INFO: App log folder: /home/vuns/Desktop/flask-project-master/app/logs [in config_log_handler:/home/vuns/Desktop/flask-project-master/app/app.py:103]
+2019-06-04 05:55:47,172 INFO: Config filename: app/config.py [in config_log_handler:/home/vuns/Desktop/flask-project-master/app/app.py:102]
+2019-06-04 05:55:47,184 INFO: App log folder: /home/vuns/Desktop/flask-project-master/app/logs [in config_log_handler:/home/vuns/Desktop/flask-project-master/app/app.py:103]
+2019-06-04 05:56:50,088 ERROR: HTTP_STATUS_CODE_500: {'message': 'Internal Server Error.', 'code': 500} [in api_error_handler:/home/vuns/Desktop/flask-project-master/app/exception.py:191]
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1832, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1818, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/vuns/Desktop/flask-project-master/app/api/chicken_farm_control.py", line 34, in get_feeding_history
+    all_history = history_collection.find({})
+  File "/home/vuns/Desktop/flask-project-master/app/db/mongo.py", line 19, in find
+    return self.db.find(spec=spec, field=field, limit=limit, skip=skip, sort=sort)
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/collection.py", line 1456, in find
+    return Cursor(self, *args, **kwargs)
+TypeError: __init__() got an unexpected keyword argument 'field'
+2019-06-04 05:56:50,088 ERROR: HTTP_STATUS_CODE_500: {'message': 'Internal Server Error.', 'code': 500} [in api_error_handler:/home/vuns/Desktop/flask-project-master/app/exception.py:191]
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1832, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1818, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/vuns/Desktop/flask-project-master/app/api/chicken_farm_control.py", line 34, in get_feeding_history
+    all_history = history_collection.find({})
+  File "/home/vuns/Desktop/flask-project-master/app/db/mongo.py", line 19, in find
+    return self.db.find(spec=spec, field=field, limit=limit, skip=skip, sort=sort)
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/collection.py", line 1456, in find
+    return Cursor(self, *args, **kwargs)
+TypeError: __init__() got an unexpected keyword argument 'field'
+2019-06-04 05:57:41,973 INFO: Config filename: app/config.py [in config_log_handler:/home/vuns/Desktop/flask-project-master/app/app.py:102]
+2019-06-04 05:57:41,974 INFO: App log folder: /home/vuns/Desktop/flask-project-master/app/logs [in config_log_handler:/home/vuns/Desktop/flask-project-master/app/app.py:103]
+2019-06-04 05:57:49,761 ERROR: HTTP_STATUS_CODE_500: {'message': 'Internal Server Error.', 'code': 500} [in api_error_handler:/home/vuns/Desktop/flask-project-master/app/exception.py:191]
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1832, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1818, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/vuns/Desktop/flask-project-master/app/api/chicken_farm_control.py", line 34, in get_feeding_history
+    all_history = history_collection.find({})
+  File "/home/vuns/Desktop/flask-project-master/app/db/mongo.py", line 19, in find
+    return self.db.find(spec=spec, field=field, limit=limit, skip=skip, sort=sort)
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/collection.py", line 1456, in find
+    return Cursor(self, *args, **kwargs)
+TypeError: __init__() got an unexpected keyword argument 'field'
+2019-06-04 05:57:49,761 ERROR: HTTP_STATUS_CODE_500: {'message': 'Internal Server Error.', 'code': 500} [in api_error_handler:/home/vuns/Desktop/flask-project-master/app/exception.py:191]
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1832, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1818, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/vuns/Desktop/flask-project-master/app/api/chicken_farm_control.py", line 34, in get_feeding_history
+    all_history = history_collection.find({})
+  File "/home/vuns/Desktop/flask-project-master/app/db/mongo.py", line 19, in find
+    return self.db.find(spec=spec, field=field, limit=limit, skip=skip, sort=sort)
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/collection.py", line 1456, in find
+    return Cursor(self, *args, **kwargs)
+TypeError: __init__() got an unexpected keyword argument 'field'
+2019-06-04 05:58:45,567 ERROR: HTTP_STATUS_CODE_500: {'message': 'Internal Server Error.', 'code': 500} [in api_error_handler:/home/vuns/Desktop/flask-project-master/app/exception.py:191]
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1832, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1818, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/vuns/Desktop/flask-project-master/app/api/chicken_farm_control.py", line 34, in get_feeding_history
+    all_history = history_collection.find({})
+  File "/home/vuns/Desktop/flask-project-master/app/db/mongo.py", line 19, in find
+    return self.db.find(spec=spec, field=field, limit=limit, skip=skip, sort=sort)
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/collection.py", line 1456, in find
+    return Cursor(self, *args, **kwargs)
+TypeError: __init__() got an unexpected keyword argument 'field'
+2019-06-04 05:58:45,567 ERROR: HTTP_STATUS_CODE_500: {'message': 'Internal Server Error.', 'code': 500} [in api_error_handler:/home/vuns/Desktop/flask-project-master/app/exception.py:191]
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1832, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1818, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/vuns/Desktop/flask-project-master/app/api/chicken_farm_control.py", line 34, in get_feeding_history
+    all_history = history_collection.find({})
+  File "/home/vuns/Desktop/flask-project-master/app/db/mongo.py", line 19, in find
+    return self.db.find(spec=spec, field=field, limit=limit, skip=skip, sort=sort)
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/collection.py", line 1456, in find
+    return Cursor(self, *args, **kwargs)
+TypeError: __init__() got an unexpected keyword argument 'field'
+2019-06-04 06:00:19,713 INFO: Config filename: app/config.py [in config_log_handler:/home/vuns/Desktop/flask-project-master/app/app.py:102]
+2019-06-04 06:00:19,715 INFO: App log folder: /home/vuns/Desktop/flask-project-master/app/logs [in config_log_handler:/home/vuns/Desktop/flask-project-master/app/app.py:103]
+2019-06-04 06:00:22,620 ERROR: HTTP_STATUS_CODE_500: {'message': 'Internal Server Error.', 'code': 500} [in api_error_handler:/home/vuns/Desktop/flask-project-master/app/exception.py:191]
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1832, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1818, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/vuns/Desktop/flask-project-master/app/api/chicken_farm_control.py", line 34, in get_feeding_history
+    all_history = history_collection.find({})
+  File "/home/vuns/Desktop/flask-project-master/app/db/mongo.py", line 19, in find
+    return self.db.find(spec=spec, field=field, limit=limit, skip=skip, sort=sort)
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/collection.py", line 1456, in find
+    return Cursor(self, *args, **kwargs)
+TypeError: __init__() got an unexpected keyword argument 'field'
+2019-06-04 06:00:22,620 ERROR: HTTP_STATUS_CODE_500: {'message': 'Internal Server Error.', 'code': 500} [in api_error_handler:/home/vuns/Desktop/flask-project-master/app/exception.py:191]
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1832, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1818, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/vuns/Desktop/flask-project-master/app/api/chicken_farm_control.py", line 34, in get_feeding_history
+    all_history = history_collection.find({})
+  File "/home/vuns/Desktop/flask-project-master/app/db/mongo.py", line 19, in find
+    return self.db.find(spec=spec, field=field, limit=limit, skip=skip, sort=sort)
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/collection.py", line 1456, in find
+    return Cursor(self, *args, **kwargs)
+TypeError: __init__() got an unexpected keyword argument 'field'
+2019-06-04 06:02:24,091 INFO: Config filename: app/config.py [in config_log_handler:/home/vuns/Desktop/flask-project-master/app/app.py:102]
+2019-06-04 06:02:24,093 INFO: App log folder: /home/vuns/Desktop/flask-project-master/app/logs [in config_log_handler:/home/vuns/Desktop/flask-project-master/app/app.py:103]
+2019-06-04 06:02:37,918 ERROR: HTTP_STATUS_CODE_500: {'message': 'Internal Server Error.', 'code': 500} [in api_error_handler:/home/vuns/Desktop/flask-project-master/app/exception.py:191]
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1832, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1818, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/vuns/Desktop/flask-project-master/app/api/chicken_farm_control.py", line 34, in get_feeding_history
+    all_history = history_collection.find({})
+  File "/home/vuns/Desktop/flask-project-master/app/db/mongo.py", line 19, in find
+    return self.db.find(spec=spec, field=field, limit=limit, skip=skip, sort=sort)
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/collection.py", line 1456, in find
+    return Cursor(self, *args, **kwargs)
+TypeError: __init__() got an unexpected keyword argument 'field'
+2019-06-04 06:02:37,918 ERROR: HTTP_STATUS_CODE_500: {'message': 'Internal Server Error.', 'code': 500} [in api_error_handler:/home/vuns/Desktop/flask-project-master/app/exception.py:191]
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1832, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1818, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/vuns/Desktop/flask-project-master/app/api/chicken_farm_control.py", line 34, in get_feeding_history
+    all_history = history_collection.find({})
+  File "/home/vuns/Desktop/flask-project-master/app/db/mongo.py", line 19, in find
+    return self.db.find(spec=spec, field=field, limit=limit, skip=skip, sort=sort)
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/collection.py", line 1456, in find
+    return Cursor(self, *args, **kwargs)
+TypeError: __init__() got an unexpected keyword argument 'field'
+2019-06-04 06:02:39,901 ERROR: HTTP_STATUS_CODE_500: {'message': 'Internal Server Error.', 'code': 500} [in api_error_handler:/home/vuns/Desktop/flask-project-master/app/exception.py:191]
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1832, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1818, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/vuns/Desktop/flask-project-master/app/api/chicken_farm_control.py", line 34, in get_feeding_history
+    all_history = history_collection.find({})
+  File "/home/vuns/Desktop/flask-project-master/app/db/mongo.py", line 19, in find
+    return self.db.find(spec=spec, field=field, limit=limit, skip=skip, sort=sort)
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/collection.py", line 1456, in find
+    return Cursor(self, *args, **kwargs)
+TypeError: __init__() got an unexpected keyword argument 'field'
+2019-06-04 06:02:39,901 ERROR: HTTP_STATUS_CODE_500: {'message': 'Internal Server Error.', 'code': 500} [in api_error_handler:/home/vuns/Desktop/flask-project-master/app/exception.py:191]
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1832, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1818, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/vuns/Desktop/flask-project-master/app/api/chicken_farm_control.py", line 34, in get_feeding_history
+    all_history = history_collection.find({})
+  File "/home/vuns/Desktop/flask-project-master/app/db/mongo.py", line 19, in find
+    return self.db.find(spec=spec, field=field, limit=limit, skip=skip, sort=sort)
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/collection.py", line 1456, in find
+    return Cursor(self, *args, **kwargs)
+TypeError: __init__() got an unexpected keyword argument 'field'
+2019-06-04 06:26:27,474 INFO: Config filename: app/config.py [in config_log_handler:/home/vuns/Desktop/flask-project-master/app/app.py:102]
+2019-06-04 06:26:27,475 INFO: App log folder: /home/vuns/Desktop/flask-project-master/app/logs [in config_log_handler:/home/vuns/Desktop/flask-project-master/app/app.py:103]
+2019-06-04 06:26:38,193 ERROR: HTTP_STATUS_CODE_500: {'message': 'Internal Server Error.', 'code': 500} [in api_error_handler:/home/vuns/Desktop/flask-project-master/app/exception.py:191]
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1832, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1818, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/vuns/Desktop/flask-project-master/app/api/chicken_farm_control.py", line 34, in get_feeding_history
+    all_history = history_collection.find({})
+  File "/home/vuns/Desktop/flask-project-master/app/db/mongo.py", line 19, in find
+    return self.db.find(spec=spec, field=field, limit=limit, skip=skip, sort=sort)
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/collection.py", line 1456, in find
+    return Cursor(self, *args, **kwargs)
+TypeError: __init__() got an unexpected keyword argument 'field'
+2019-06-04 06:26:38,193 ERROR: HTTP_STATUS_CODE_500: {'message': 'Internal Server Error.', 'code': 500} [in api_error_handler:/home/vuns/Desktop/flask-project-master/app/exception.py:191]
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1832, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1818, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/vuns/Desktop/flask-project-master/app/api/chicken_farm_control.py", line 34, in get_feeding_history
+    all_history = history_collection.find({})
+  File "/home/vuns/Desktop/flask-project-master/app/db/mongo.py", line 19, in find
+    return self.db.find(spec=spec, field=field, limit=limit, skip=skip, sort=sort)
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/collection.py", line 1456, in find
+    return Cursor(self, *args, **kwargs)
+TypeError: __init__() got an unexpected keyword argument 'field'
+2019-06-04 06:28:02,622 INFO: Config filename: app/config.py [in config_log_handler:/home/vuns/Desktop/flask-project-master/app/app.py:102]
+2019-06-04 06:28:02,623 INFO: App log folder: /home/vuns/Desktop/flask-project-master/app/logs [in config_log_handler:/home/vuns/Desktop/flask-project-master/app/app.py:103]
+2019-06-04 06:30:03,227 INFO: Config filename: app/config.py [in config_log_handler:/home/vuns/Desktop/flask-project-master/app/app.py:102]
+2019-06-04 06:30:03,229 INFO: App log folder: /home/vuns/Desktop/flask-project-master/app/logs [in config_log_handler:/home/vuns/Desktop/flask-project-master/app/app.py:103]
+2019-06-04 06:30:06,094 ERROR: HTTP_STATUS_CODE_500: {'message': 'Internal Server Error.', 'code': 500} [in api_error_handler:/home/vuns/Desktop/flask-project-master/app/exception.py:191]
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1832, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1818, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/vuns/Desktop/flask-project-master/app/api/chicken_farm_control.py", line 34, in get_feeding_history
+    all_history = history_collection.find({})
+  File "/home/vuns/Desktop/flask-project-master/app/db/mongo.py", line 19, in find
+    return self.db.find(spec=spec, field=field, limit=limit, skip=skip, sort=sort)
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/collection.py", line 1456, in find
+    return Cursor(self, *args, **kwargs)
+TypeError: __init__() got an unexpected keyword argument 'field'
+2019-06-04 06:30:06,094 ERROR: HTTP_STATUS_CODE_500: {'message': 'Internal Server Error.', 'code': 500} [in api_error_handler:/home/vuns/Desktop/flask-project-master/app/exception.py:191]
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1832, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1818, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/vuns/Desktop/flask-project-master/app/api/chicken_farm_control.py", line 34, in get_feeding_history
+    all_history = history_collection.find({})
+  File "/home/vuns/Desktop/flask-project-master/app/db/mongo.py", line 19, in find
+    return self.db.find(spec=spec, field=field, limit=limit, skip=skip, sort=sort)
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/collection.py", line 1456, in find
+    return Cursor(self, *args, **kwargs)
+TypeError: __init__() got an unexpected keyword argument 'field'
+2019-06-04 06:30:50,699 INFO: Config filename: app/config.py [in config_log_handler:/home/vuns/Desktop/flask-project-master/app/app.py:102]
+2019-06-04 06:30:50,701 INFO: App log folder: /home/vuns/Desktop/flask-project-master/app/logs [in config_log_handler:/home/vuns/Desktop/flask-project-master/app/app.py:103]
+2019-06-04 06:30:53,494 ERROR: HTTP_STATUS_CODE_500: {'message': 'Internal Server Error.', 'code': 500} [in api_error_handler:/home/vuns/Desktop/flask-project-master/app/exception.py:191]
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1832, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1818, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/vuns/Desktop/flask-project-master/app/api/chicken_farm_control.py", line 34, in get_feeding_history
+    all_history = history_collection.find({})
+  File "/home/vuns/Desktop/flask-project-master/app/db/mongo.py", line 19, in find
+    return self.db.find(spec=spec, field=field, limit=limit, skip=skip, sort=sort)
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/collection.py", line 1456, in find
+    return Cursor(self, *args, **kwargs)
+TypeError: __init__() got an unexpected keyword argument 'field'
